@@ -1,3 +1,9 @@
+# Home
+
+## Blog
+
+* [Link to another page](./another-page.html).
+
 ## Publications
 
 ### First Author
@@ -14,3 +20,7 @@
 1. Jia Fan, Xuan Zhao, <u>Xinnan Mao</u>, Jie Xu, Na Han, Hao Yang, Binbin Pan, Yongshen Li, Lu Wang, Yanguang Li\*, "Large-Area Vertically Aligned Bismuthene Nanosheet Arrays from Galvanic Replacement Reaction for Efficient Electrochemical CO<sub>2</sub> Conversion", Adv. Mater., 2021, DOI: [10.1002/adma.202100910](<https://doi.org/10.1002/adma.202100910>). `0`
 1. Guozheng Shi, Haibin Wang, Yaohong Zhang, Chen Cheng, Tianshu Zhai, Botong Chen, Xinyi Liu, Ryota Jono, <u>Xinnan Mao</u>, Yang Liu, Xuliang Zhang, Xufeng Ling, Yannan Zhang, Xing Meng, Yifan Chen, Steffen Duhm, Liang Zhang, Tao Li, Lu Wang, Shiyun Xiong, Takashi Sagawa, Takaya Kubo, Hiroshi Segawa, Qing Shen, Zeke Liu\*, Wanli Ma\*, "The effect of water on colloidal quantum dot solar cells", Nat. Commun., 2021, 12, 4381, DOI: [10.1038/s41467-021-24614-7](<https://doi.org/10.1038/s41467-021-24614-7>). `0`
 1. Yunzhou Wen&Dagger;, Peining Chen&Dagger;, Lu Wang&Dagger;, Shangyu Li&Dagger;, Ziyun Wang, Jehad Abed, <u>Xinnan Mao</u>, Yimeng Min, Cao Thang Dinh, Phil De Luna, Rui Huang, Longsheng Zhang, Lie Wang, Liping Wang, Robert J. Nielsen, Huihui Li, Taotao Zhuang, Changchun Ke, Oleksandr Voznyy, Yongfeng Hu, Youyong Li, William A. Goddard III, Bo Zhang\*, Huisheng Peng\*, Edward H. Sargent\*, "Stabilizing Highly Active Ru Sites by Suppressing Lattice Oxygen Participation in Acidic Water Oxidation", J. Am. Chem. Soc., 2021, 143, 17, 6482-6490, DOI: [10.1021/jacs.1c00384](<https://doi.org/10.1021/jacs.1c00384>). `0`
+
+## Contact Information
+
+e-mail: xnmao@alu.suda.edu.cn
