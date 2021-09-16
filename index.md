@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Home
 
 ## Blog
@@ -23,4 +27,4 @@
 
 ## Contact Information
 
-e-mail: xnmao@alu.suda.edu.cn
++ e-mail: xnmao@alu.suda.edu.cn
