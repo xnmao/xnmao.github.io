@@ -1,6 +1,5 @@
 ---
 layout: default
-comments: true
 ---
 
 ## Welcome to another page
