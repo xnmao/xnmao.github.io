@@ -19,4 +19,4 @@ d = np.cross((1, k), (x-x0, y-y0))/np.linalg.norm((1, k))
 ```
 这样就可以得到点到直线的距离为`abs(d)`
 
-[back](./)
+[back](../)

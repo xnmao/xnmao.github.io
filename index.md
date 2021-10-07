@@ -6,7 +6,7 @@ layout: default
 
 ## Blog
 
-* [使用Python求解点到直线的距离](./blog/distance.html).
+* [使用Python求解点到直线的距离](./blog/distance.html)
 
 ## Publications
 
