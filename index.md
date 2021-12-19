@@ -5,7 +5,7 @@ layout: default
 # Home
 
 ## Blog
-
+* [构建碳纳米管](./blog/tube.md)
 * [计算工具](./blog/tools.md)
 * [Nature电子版](./blog/nature.html)
 * [使用Python求解点到直线的距离](./blog/distance.html)
