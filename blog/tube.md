@@ -10,11 +10,16 @@ from ase.build import graphene
 from ase.visualize import view
 import numpy as np
 
+# HEX2D graphene
+atoms = graphene(a=2.46) # lattice parameter
+
 # HEX2D to RECT
-atoms = graphene(a=2.46, size=(2, 2, 1)) # lattice parameter
-atoms.cell[0] = atoms.get_distance(0, 4, vector=True)
-atoms.cell[1] = atoms.get_distance(1, 6, vector=True)*3
-atoms = atoms[[0, 1, 6, 3]]
+atoms = atoms.repeat((2, 2, 1))
+cell = atoms.get_cell() # a==b!=c; alpha==beta==90, gamma==120
+atoms.set_cell(((0.5, 0, 0), (0, 1, 0), (0, 0, 1))*cell) # a!=b!=c; alpha==beta==gamma==90
+scaled_positions = atoms.get_scaled_positions(wrap=False)
+eps = 1e-03
+atoms = atoms[((scaled_positions>-eps)&(scaled_positions<1-eps)).all(axis=1)] # delete mirror atoms
 
 index = 0 # 石墨烯卷曲方向(0或1)
 size = 50 # 碳管截面圆包含重复单元数(控制管径)
