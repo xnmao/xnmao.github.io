@@ -10,7 +10,7 @@ from ase.build import graphene
 from ase.visualize import view
 import numpy as np
 
-# HEX2D graphene
+# primitive HEX2D graphene
 atoms = graphene(a=2.46) # lattice parameter
 
 # HEX2D to RECT
