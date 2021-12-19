@@ -31,11 +31,10 @@ rep[index] = size
 atoms = atoms.repeat(rep)
 
 # roll up
-l = atoms.get_cell()[index, index]*0.5 # circumference*0.5
 X = atoms.get_positions()[:, index]
-r = l/np.pi # radius
-atoms.positions[:, index] = l/np.pi*(1-np.cos(X/r)) # theta = length_of_arc/radius
-atoms.positions[:, 2] = l/np.pi*np.sin(X/r)
+r = 0.5/np.pi*atoms.get_cell()[index, index] # radius
+atoms.positions[:, index] = r*(1-np.cos(X/r)) # theta = length_of_arc/radius
+atoms.positions[:, 2] = r*np.sin(X/r)
 
 # fancy
 atoms.center(vacuum=7.5, axis=[index, 2]) # add vacuum
