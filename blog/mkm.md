@@ -6,8 +6,7 @@ layout: default
 
 ### 设计ORR反应过程
 
-1. 氧气扩散到催化剂附近的双电层:
-<center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}(\mathrm{aq})&space;\underset{k_{-1}}{\stackrel{k_{1}}{\rightleftharpoons}}&space;\mathrm{O}_{2}(\mathrm{dl})" title="\mathrm{O}_{2}(\mathrm{aq}) \underset{k_{-1}}{\stackrel{k_{1}}{\rightleftharpoons}} \mathrm{O}_{2}(\mathrm{dl})" /></center>
+1. 氧气扩散到催化剂附近的双电层:<center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}(\mathrm{aq})&space;\underset{k_{-1}}{\stackrel{k_{1}}{\rightleftharpoons}}&space;\mathrm{O}_{2}(\mathrm{dl})" title="\mathrm{O}_{2}(\mathrm{aq}) \underset{k_{-1}}{\stackrel{k_{1}}{\rightleftharpoons}} \mathrm{O}_{2}(\mathrm{dl})" /></center>
 2. 氧气吸附在位点A上
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}(\mathrm{dl})&plus;*_{\mathrm{A}}&space;\underset{k_{-2}}{\stackrel{k_{2}}{\rightleftharpoons}}&space;\mathrm{O}_{2}&space;*_{\mathrm{A}}" title="\mathrm{O}_{2}(\mathrm{dl})+*_{\mathrm{A}} \underset{k_{-2}}{\stackrel{k_{2}}{\rightleftharpoons}} \mathrm{O}_{2} *_{\mathrm{A}}" /></center>
 3. 生成\*OOH
@@ -34,17 +33,11 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?K_{i}=\exp&space;\left(-\frac{\Delta&space;G_{i}}{k_{\mathrm{B}}&space;T}\right)" title="K_{i}=\exp \left(-\frac{\Delta G_{i}}{k_{\mathrm{B}} T}\right)" /></center>
 
 #### 写出速率方程
-1. 双电层中的氧气
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial&space;t}=k_{1}&space;x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}-k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}&plus;k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}" title="\frac{\partial x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial t}=k_{1} x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1} x_{\mathrm{O}_{2}(\mathrm{dl})}-k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}+k_{-2} \theta_{\mathrm{O}_{2} *_\mathrm{A}}" /></center>
-2. 位点A  
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{*_{\mathrm{A}}}}{\partial&space;t}=k_{6}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}-k_{-6}&space;\theta_{*_{\mathrm{A}}}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}-k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}&plus;k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{*_{\mathrm{A}}}}{\partial t}=k_{6} \theta_{\mathrm{OH} *_{\mathrm{A}}}-k_{-6} \theta_{*_{\mathrm{A}}} x_{\mathrm{H}_{2} \mathrm{O}}-k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}+k_{-2} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}" /></center>
-3. 位点A吸附氧气
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}}{\partial&space;t}=k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}-k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}-k_{3}&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}&plus;k_{-3}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{\mathrm{O}_{2} *_\mathrm{A}}}{\partial t}=k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}-k_{-2} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}-k_{3} \theta_{\mathrm{O}_{2} *_\mathrm{A}}+k_{-3} \theta_{\mathrm{OOH} *_{\mathrm{A}}}" /></center>
-4. 位点A吸附OOH
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}}{\partial&space;t}=k_{3}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}-k_{-3}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}-k_{4}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}&plus;k_{-4}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{\mathrm{OOH} *_{\mathrm{A}}}}{\partial t}=k_{3} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}-k_{-3} \theta_{\mathrm{OOH} *_{\mathrm{A}}}-k_{4} \theta_{\mathrm{OOH} *_{\mathrm{A}}}+k_{-4} x_{\mathrm{H}_{2} \mathrm{O}} \theta_{\mathrm{O} *_{\mathrm{A}}}" /></center>
-5. 位点A吸附O
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}}{\partial&space;t}=k_{4}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}-k_{-4}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}-k_{5}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&plus;k_{-5}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{\mathrm{O} *_{\mathrm{A}}}}{\partial t}=k_{4} \theta_{\mathrm{OOH} *_{\mathrm{A}}}-k_{-4} x_{\mathrm{H}_{2} \mathrm{O}} \theta_{\mathrm{O} *_{\mathrm{A}}}-k_{5} \theta_{\mathrm{O} *_{\mathrm{A}}}+k_{-5} \theta_{\mathrm{OH} *_{\mathrm{A}}}" /></center>
-6. 位点A吸附OH
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}}{\partial&space;t}=k_{5}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}-k_{-5}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}-k_{6}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}&plus;k_{-6}&space;\theta_{*_{\mathrm{A}}}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}" title="\frac{\partial \theta_{\mathrm{OH} *_{\mathrm{A}}}}{\partial t}=k_{5} \theta_{\mathrm{O} *_{\mathrm{A}}}-k_{-5} \theta_{\mathrm{OH} *_{\mathrm{A}}}-k_{6} \theta_{\mathrm{OH} *_{\mathrm{A}}}+k_{-6} \theta_{*_{\mathrm{A}}} x_{\mathrm{H}_{2} \mathrm{O}}" /></center>
 
 位点守恒
