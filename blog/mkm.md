@@ -6,48 +6,48 @@ layout: default
 
 ### 设计ORR反应过程
 
-1. 第一步氧气扩散到催化剂附近的双电层:  
+1. 氧气扩散到催化剂附近的双电层:
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}(\mathrm{aq})&space;\underset{k_{-1}}{\stackrel{k_{1}}{\rightleftharpoons}}&space;\mathrm{O}_{2}(\mathrm{dl})" title="\mathrm{O}_{2}(\mathrm{aq}) \underset{k_{-1}}{\stackrel{k_{1}}{\rightleftharpoons}} \mathrm{O}_{2}(\mathrm{dl})" /></center>
-2. 第二步氧气吸附  
+2. 氧气吸附在位点A上
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}(\mathrm{dl})&plus;*_{\mathrm{A}}&space;\underset{k_{-2}}{\stackrel{k_{2}}{\rightleftharpoons}}&space;\mathrm{O}_{2}&space;*_{\mathrm{A}}" title="\mathrm{O}_{2}(\mathrm{dl})+*_{\mathrm{A}} \underset{k_{-2}}{\stackrel{k_{2}}{\rightleftharpoons}} \mathrm{O}_{2} *_{\mathrm{A}}" /></center>
-3. 第三步\*OOH  
+3. 生成\*OOH
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}&space;*_{\mathrm{A}}&plus;\mathrm{H}^{&plus;}&plus;\mathrm{e}^{-}&space;\underset{k_{-3}}{\stackrel{k_{3}}{\rightleftharpoons}}&space;\mathrm{OOH}&space;*_{\mathrm{A}}" title="\mathrm{O}_{2} *_{\mathrm{A}}+\mathrm{H}^{+}+\mathrm{e}^{-} \underset{k_{-3}}{\stackrel{k_{3}}{\rightleftharpoons}} \mathrm{OOH} *_{\mathrm{A}}" /></center>
-4. 第四步\*O  
+4. 生成\*O
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{OOH}&space;*_{\mathrm{A}}&plus;\mathrm{H}^{&plus;}&plus;\mathrm{e}^{-}&space;\underset{k_{-4}}{\stackrel{k_{4}}{\rightleftharpoons}}&space;\mathrm{O}&space;*_{\mathrm{A}}&plus;\mathrm{H}_{2}&space;\mathrm{O}" title="\mathrm{OOH} *_{\mathrm{A}}+\mathrm{H}^{+}+\mathrm{e}^{-} \underset{k_{-4}}{\stackrel{k_{4}}{\rightleftharpoons}} \mathrm{O} *_{\mathrm{A}}+\mathrm{H}_{2} \mathrm{O}" /></center>
-5. 第五步\*OH  
+5. 生成\*OH
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{O}&space;*_{\mathrm{A}}&plus;\mathrm{H}^{&plus;}&plus;\mathrm{e}^{-}&space;\underset{k_{-5}}{\stackrel{k_{5}}{\rightleftharpoons}}&space;\mathrm{OH}&space;*_{\mathrm{A}}" title="\mathrm{O} *_{\mathrm{A}}+\mathrm{H}^{+}+\mathrm{e}^{-} \underset{k_{-5}}{\stackrel{k_{5}}{\rightleftharpoons}} \mathrm{OH} *_{\mathrm{A}}" /></center>
-6. 第六步H2O  
+6. 生成H2O
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{OH}&space;*_{\mathrm{A}}&plus;\mathrm{H}^{&plus;}&plus;\mathrm{e}^{-}&space;\underset{k_{-6}}{\stackrel{k_{6}}{\rightleftharpoons}}&space;*_{\mathrm{A}}&plus;\mathrm{H}_{2}&space;\mathrm{O}" title="\mathrm{OH} *_{\mathrm{A}}+\mathrm{H}^{+}+\mathrm{e}^{-} \underset{k_{-6}}{\stackrel{k_{6}}{\rightleftharpoons}} *_{\mathrm{A}}+\mathrm{H}_{2} \mathrm{O}" /></center>
 
 ### 建立微分方程
 
 #### 反应速率常数
-1. 对于化学反应  
+1. 对于化学反应
 <center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
-2. 对于电化学反应  
+2. 对于电化学反应
 <center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}^{0}}{k_{\mathrm{B}}&space;T}\right)&space;\exp&space;\left(-\frac{e&space;\beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}^{0}}{k_{\mathrm{B}} T}\right) \exp \left(-\frac{e \beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}} T}\right)" /></center>
-3. 重新写一遍  
+3. 重新写一遍
 <center><img src="https://latex.codecogs.com/svg.image?k_{i}=A_{i}&space;\exp&space;\left(-\frac{E_{a,&space;i}^{0}}{k_{\mathrm{B}}&space;T}\right)&space;\exp&space;\left(-\frac{e&space;\beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=A_{i} \exp \left(-\frac{E_{a, i}^{0}}{k_{\mathrm{B}} T}\right) \exp \left(-\frac{e \beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}} T}\right)" /></center>
-4. 逆反应速率常数  
+4. 逆反应速率常数
 <center><img src="https://latex.codecogs.com/svg.image?k_{-i}=\frac{k_{i}}{K_{i}}" title="k_{-i}=\frac{k_{i}}{K_{i}}" /></center>
-5. 平衡常数  
+5. 平衡常数
 <center><img src="https://latex.codecogs.com/svg.image?K_{i}=\exp&space;\left(-\frac{\Delta&space;G_{i}}{k_{\mathrm{B}}&space;T}\right)" title="K_{i}=\exp \left(-\frac{\Delta G_{i}}{k_{\mathrm{B}} T}\right)" /></center>
 
 #### 写出速率方程
-1. 双电层中的氧气  
+1. 双电层中的氧气
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial&space;t}=k_{1}&space;x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}-k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}&plus;k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}" title="\frac{\partial x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial t}=k_{1} x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1} x_{\mathrm{O}_{2}(\mathrm{dl})}-k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}+k_{-2} \theta_{\mathrm{O}_{2} *_\mathrm{A}}" /></center>
 2. 位点A  
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{*_{\mathrm{A}}}}{\partial&space;t}=k_{6}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}-k_{-6}&space;\theta_{*_{\mathrm{A}}}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}-k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}&plus;k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{*_{\mathrm{A}}}}{\partial t}=k_{6} \theta_{\mathrm{OH} *_{\mathrm{A}}}-k_{-6} \theta_{*_{\mathrm{A}}} x_{\mathrm{H}_{2} \mathrm{O}}-k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}+k_{-2} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}" /></center>
-3. 位点A吸附氧气  
+3. 位点A吸附氧气
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}}{\partial&space;t}=k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}-k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}-k_{3}&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}&plus;k_{-3}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{\mathrm{O}_{2} *_\mathrm{A}}}{\partial t}=k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}-k_{-2} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}-k_{3} \theta_{\mathrm{O}_{2} *_\mathrm{A}}+k_{-3} \theta_{\mathrm{OOH} *_{\mathrm{A}}}" /></center>
-4. 位点A吸附OOH  
+4. 位点A吸附OOH
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}}{\partial&space;t}=k_{3}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}-k_{-3}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}-k_{4}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}&plus;k_{-4}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{\mathrm{OOH} *_{\mathrm{A}}}}{\partial t}=k_{3} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}-k_{-3} \theta_{\mathrm{OOH} *_{\mathrm{A}}}-k_{4} \theta_{\mathrm{OOH} *_{\mathrm{A}}}+k_{-4} x_{\mathrm{H}_{2} \mathrm{O}} \theta_{\mathrm{O} *_{\mathrm{A}}}" /></center>
-5. 位点A吸附O  
+5. 位点A吸附O
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}}{\partial&space;t}=k_{4}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}-k_{-4}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}-k_{5}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&plus;k_{-5}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}" title="\frac{\partial \theta_{\mathrm{O} *_{\mathrm{A}}}}{\partial t}=k_{4} \theta_{\mathrm{OOH} *_{\mathrm{A}}}-k_{-4} x_{\mathrm{H}_{2} \mathrm{O}} \theta_{\mathrm{O} *_{\mathrm{A}}}-k_{5} \theta_{\mathrm{O} *_{\mathrm{A}}}+k_{-5} \theta_{\mathrm{OH} *_{\mathrm{A}}}" /></center>
-6. 位点A吸附OH  
+6. 位点A吸附OH
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}}{\partial&space;t}=k_{5}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}-k_{-5}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}-k_{6}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}&plus;k_{-6}&space;\theta_{*_{\mathrm{A}}}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}" title="\frac{\partial \theta_{\mathrm{OH} *_{\mathrm{A}}}}{\partial t}=k_{5} \theta_{\mathrm{O} *_{\mathrm{A}}}-k_{-5} \theta_{\mathrm{OH} *_{\mathrm{A}}}-k_{6} \theta_{\mathrm{OH} *_{\mathrm{A}}}+k_{-6} \theta_{*_{\mathrm{A}}} x_{\mathrm{H}_{2} \mathrm{O}}" /></center>
 
-位点守恒  
+位点守恒
 <center><img src="https://latex.codecogs.com/svg.image?1=\theta_{*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}&plus;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}" title="1=\theta_{*_{\mathrm{A}}}+\theta_{\mathrm{O}_{2} *_\mathrm{A}}+\theta_{\mathrm{OOH} *_{\mathrm{A}}}+\theta_{\mathrm{O} *_{\mathrm{A}}}+\theta_{\mathrm{OH} *_{\mathrm{A}}}" /></center>
 
 #### 计算电流密度
