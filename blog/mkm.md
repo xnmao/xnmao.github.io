@@ -64,6 +64,7 @@ layout: default
 #### 输入文件
 
 1. `ORR.mkm`文件
+
 ```python
 scaler = 'ThermodynamicScaler' # use T/p/U as descriptors and treat energetics as a constant
 
@@ -107,6 +108,7 @@ max_bisections = 5
 ```
 
 2. `ORR_input.txt`文件
+
 ```
 surface_name	site_name	species_name	formation_energy	bulk_structure	frequencies	other_parameters	reference
 None	gas	pe	0.0	None	[]	[]	gas phase calcs
