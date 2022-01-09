@@ -23,8 +23,6 @@ layout: default
 4. 逆反应速率常数<center><img src="https://latex.codecogs.com/svg.image?k_{-i}=\frac{k_{i}}{K_{i}}" title="k_{-i}=\frac{k_{i}}{K_{i}}" /></center>
 5. 平衡常数<center><img src="https://latex.codecogs.com/svg.image?K_{i}=\exp&space;\left(-\frac{\Delta&space;G_{i}}{k_{\mathrm{B}}&space;T}\right)" title="K_{i}=\exp \left(-\frac{\Delta G_{i}}{k_{\mathrm{B}} T}\right)" /></center>
 
-#### 求解速率方程
-
 #### 质量作用定律（law of mass action）
 基元反应的速率与反应物浓度（含有相应的指数）的乘积成正比，其中各浓度的指数就是反应式中各反应物质的计量系数。净的右向反应速率取决于正向及逆向反应速率的总结果，即
 <center><img src="https://latex.codecogs.com/svg.image?r_{1}&space;=&space;k_{1}&space;x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}" title="r_{1} = k_{1} x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1} x_{\mathrm{O}_{2}(\mathrm{dl})}" /></center>
@@ -34,7 +32,7 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?r_{5}&space;=&space;k_{5}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}-k_{-5}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}" title="r_{5} = k_{5} \theta_{\mathrm{O} *_{\mathrm{A}}}-k_{-5} \theta_{\mathrm{OH} *_{\mathrm{A}}}" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?r_{6}&space;=&space;k_{6}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}-k_{-6}&space;\theta_{*_{\mathrm{A}}}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}" title="r_{6} = k_{6} \theta_{\mathrm{OH} *_{\mathrm{A}}}-k_{-6} \theta_{*_{\mathrm{A}}} x_{\mathrm{H}_{2} \mathrm{O}}" /></center>
 
-##### 稳态近似法（steady state approximation method）
+#### 稳态近似法（steady state approximation method）
 可以近似地认为在反应达到稳定状态后，中间体的浓度基本上不随时间而变化。对ORR过程中产生的中间体作稳态近似，得
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial&space;t}&space;=&space;r_{1}-r_{2}&space;=&space;0" title="\frac{\partial x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial t} = r_{1}-r_{2} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{6}-r_{2}&space;=&space;0" title="\frac{\partial \theta_{*_{\mathrm{A}}}}{\partial t} = r_{6}-r_{2} = 0" /></center>
@@ -47,9 +45,15 @@ layout: default
 假设所有反应中间体占据1个位点，即
 <center><img src="https://latex.codecogs.com/svg.image?\theta_{*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}&plus;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}=1" title="\theta_{*_{\mathrm{A}}}+\theta_{\mathrm{O}_{2} *_\mathrm{A}}+\theta_{\mathrm{OOH} *_{\mathrm{A}}}+\theta_{\mathrm{O} *_{\mathrm{A}}}+\theta_{\mathrm{OH} *_{\mathrm{A}}}=1" /></center>
 
-#### 速控步近似
-在一系列的连续反应中，若其中有一步反应的速率最慢，它控制了总反应的速率，使反应的速率基本等于最慢一步的速率，则这最慢的一步反应称为速控步（rate controlling step）或决速步（rate determining step）。
+#### 求解速率方程
 
+#### 速控步近似
+在一系列的连续反应中，若其中有一步反应的速率最慢，它控制了总反应的速率，使反应的速率基本等于最慢一步的速率，则这最慢的一步反应称为速控步（rate controlling step）或决速步（rate determining step），即
+<center><img src="https://latex.codecogs.com/svg.image?r=\max\left(r_{1},r_{2},r_{3},r_{4},r_{5},r_{6}\right)" title="r=\max\left(r_{1},r_{2},r_{3},r_{4},r_{5},r_{6}\right)" /></center>
+根据总反应，
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{e^{-}}=-4r" title="\mathrm{TOF}_{e^{-}}=-4r" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{O}_{2}(\mathrm{aq})}=-r" title="\mathrm{TOF}_{\mathrm{O}_{2}(\mathrm{aq})}=-r" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" title="\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" /></center>
 
 #### 计算电流密度
 1. 电流密度
