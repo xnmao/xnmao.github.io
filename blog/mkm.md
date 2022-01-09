@@ -26,7 +26,7 @@ layout: default
 #### 求解速率方程
 
 #### 质量作用定律（law of mass action）
-基元反应的速率与反应物浓度（含有相应的指数）的乘积成正比，其中各浓度的指数就是反应式中各反应物质的计量系数
+基元反应的速率与反应物浓度（含有相应的指数）的乘积成正比，其中各浓度的指数就是反应式中各反应物质的计量系数。净的右向反应速率取决于正向及逆向反应速率的总结果，即
 <center><img src="https://latex.codecogs.com/svg.image?r_{1}&space;=&space;k_{1}&space;x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}" title="r_{1} = k_{1} x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1} x_{\mathrm{O}_{2}(\mathrm{dl})}" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?r_{2}&space;=&space;k_{2}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;\theta_{*_{\mathrm{A}}}-k_{-2}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}" title="r_{2} = k_{2} x_{\mathrm{O}_{2}(\mathrm{dl})} \theta_{*_{\mathrm{A}}}-k_{-2} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?r_{3}&space;=&space;k_{3}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}-k_{-3}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}" title="r_{3} = k_{3} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}-k_{-3} \theta_{\mathrm{OOH} *_{\mathrm{A}}}" /></center>
