@@ -51,8 +51,8 @@ layout: default
 在一系列的连续反应中，若其中有一步反应的速率最慢，它控制了总反应的速率，使反应的速率基本等于最慢一步的速率，则这最慢的一步反应称为速控步（rate controlling step）或决速步（rate determining step），即
 <center><img src="https://latex.codecogs.com/svg.image?r=\max\left(r_{1},r_{2},r_{3},r_{4},r_{5},r_{6}\right)" title="r=\max\left(r_{1},r_{2},r_{3},r_{4},r_{5},r_{6}\right)" /></center>
 根据总反应，
-<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{e^{-}}=-4r" title="\mathrm{TOF}_{e^{-}}=-4r" /></center>
-<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{O}_{2}(\mathrm{aq})}=-r" title="\mathrm{TOF}_{\mathrm{O}_{2}(\mathrm{aq})}=-r" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{H}^{&plus;}}=\mathrm{TOF}_{e^{-}}=-4r" title="\mathrm{TOF}_{\mathrm{H}^{+}}=\mathrm{TOF}_{e^{-}}=-4r" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{O}_{2}}=-r" title="\mathrm{TOF}_{\mathrm{O}_{2}}=-r" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" title="\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" /></center>
 
 #### 计算电流密度
