@@ -59,5 +59,68 @@ layout: default
 1. 电流密度
 <center><img src="https://latex.codecogs.com/svg.image?j=e&space;\rho&space;\mathrm{TOF}_{e^{-}}" title="j=e \rho \mathrm{TOF}_{e^{-}}" /></center>
 
+### 使用CatMAP求解
+
+#### 输入文件
+
+1. `ORR.mkm`文件
+```python
+scaler = 'ThermodynamicScaler' # use T/p/U as descriptors and treat energetics as a constant
+
+rxn_expressions = [
+    'O2_g + *_dl <-> O2_dl; prefactor=8e5',                    # rxn 1 - O2 to O2 in double layer
+    '*_a + O2_dl -> O2_a + *_dl; prefactor=1e8',               # rxn 2 - O2 double layer adsorption to a
+    'O2_a + pe_g -> ^0.26eV_a -> OOH_a; prefactor=1e9',        # rxn 3 - O2 -> OOH on a
+    'OOH_a + pe_g -> ^0.26eV_a -> O_a + H2O_g; prefactor=1e9', # rxn 4 - OOH -> O + H2O on a
+    'O_a + pe_g -> ^0.26eV_a -> OH_a; prefactor=1e9',          # rxn 5 - O -> OH on a
+    'OH_a + pe_g -> ^0.26eV_a -> *_a + H2O_g; prefactor=1e9',  # rxn 6 - OH -> H2O on a
+]
+
+surface_names = ['Pt',]
+
+descriptor_names= ['voltage', 'temperature'] # voltage/temperature/pressure
+descriptor_ranges = [[0., 1.23], [298.15, 298.15]]
+resolution = [151, 1]
+
+beta = 0.5
+
+species_definitions = {}
+# assume heine's free energy numbers are already pressure-corrected
+species_definitions['H2O_g'] = {'pressure': 1.}
+species_definitions['O2_g'] = {'pressure': 2.34e-05}
+species_definitions['pe_g'] = {'pressure': 1.}
+
+species_definitions['a'] = {'site_names': ['a'], 'total': 1.}
+species_definitions['dl'] = {'site_names': ['dl'], 'total': 1.}
+
+data_file = 'ORR.pkl'
+input_file = 'ORR_input.txt'
+
+gas_thermo_mode = 'frozen_gas'
+adsorbate_thermo_mode = 'frozen_adsorbate'
+electrochemical_thermo_mode = 'simple_electrochemical'
+
+decimal_precision = 200
+tolerance = 1e-50
+max_rootfinding_iterations = 1000
+max_bisections = 5
+```
+
+2. `ORR_input.txt`文件
+```
+surface_name	site_name	species_name	formation_energy	bulk_structure	frequencies	other_parameters	reference
+None	gas	pe	0.0	None	[]	[]	gas phase calcs
+None	gas	H2O	0.0	None	[]	[]	Hansen 2014
+None	gas	H2	0.0	None	[]	[]	Hansen 2014
+None	gas	O2	5.19	None	[]	[]	Hansen 2014
+Pt	a	O2	4.99	fcc	[]	[]	Hansen 2014
+Pt	dl	O2	5.19	fcc	[]	[]	Hansen 2014
+Pt	a	OOH	3.91	fcc	[]	[]	Hansen 2014
+Pt	a	O	1.7	fcc	[]	[]	Hansen 2014
+Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
+Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
+```
+
+3. `mkm_job.py`文件
 
 [[Back]](../)
