@@ -76,7 +76,7 @@ Pt	a	O	1.7	fcc	[]	[]	Hansen 2014
 Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
 Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
 ```
-<center><img src="../graphic/ORR/free_energy_diagram.svg" title="FED" width="85%"/></center>
+<center><img src="../graphic/ORR/free_energy_diagram.svg" title="FED" width="50%"/></center>
 
 ##### `ORR.mkm`文件
 ```python
@@ -125,8 +125,8 @@ max_bisections = 5
 
 #### 计算结果
 电流密度
-<center><img src="../graphic/ORR/current_density.svg" title="current density" width="85%"/></center>
+<center><img src="../graphic/ORR/current_density.svg" title="current density" width="90%"/></center>
 覆盖度
-<center><img src="../graphic/ORR/coverages.svg" title="coverages" width="85%"/></center>
+<center><img src="../graphic/ORR/coverages.svg" title="coverages" width="90%"/></center>
 
 [[Back]](../)
