@@ -125,9 +125,9 @@ max_bisections = 5
 
 #### 计算结果
 电流密度
-![current_density](../graphic/ORR/current_density.svg){:width="80"}
+![current_density](../graphic/ORR/current_density.svg){:width="80%"}
 覆盖度
-![coverages](../graphic/ORR/coverages.svg){:width="80"}
+![coverages](../graphic/ORR/coverages.svg){:width="80%"}
 
 
 [[Back]](../)
