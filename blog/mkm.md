@@ -76,7 +76,7 @@ Pt	a	O	1.7	fcc	[]	[]	Hansen 2014
 Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
 Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
 ```
-![FED](../graphic/ORR/free_energy_diagram.svg)
+<center><img src="../graphic/ORR/free_energy_diagram.svg" title="FED" width="85%"/></center>
 
 ##### `ORR.mkm`文件
 ```python
