@@ -56,15 +56,28 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" title="\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" /></center>
 
 #### 计算电流密度
-1. 电流密度
+单位面积电极上通过的电流
 <center><img src="https://latex.codecogs.com/svg.image?j=e&space;\rho&space;\mathrm{TOF}_{e^{-}}" title="j=e \rho \mathrm{TOF}_{e^{-}}" /></center>
 
 ### 使用CatMAP求解
 
 #### 输入文件
 
-1. `ORR.mkm`文件
+##### `ORR_input.txt`文件
+```
+surface_name	site_name	species_name	formation_energy	bulk_structure	frequencies	other_parameters	reference
+None	gas	pe	0.0	None	[]	[]	gas phase calcs
+None	gas	H2O	0.0	None	[]	[]	Hansen 2014
+None	gas	O2	5.19	None	[]	[]	Hansen 2014
+Pt	a	O2	4.99	fcc	[]	[]	Hansen 2014
+Pt	dl	O2	5.19	fcc	[]	[]	Hansen 2014
+Pt	a	OOH	3.91	fcc	[]	[]	Hansen 2014
+Pt	a	O	1.7	fcc	[]	[]	Hansen 2014
+Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
+Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
+```
 
+##### `ORR.mkm`文件
 ```python
 scaler = 'ThermodynamicScaler' # use T/p/U as descriptors and treat energetics as a constant
 
@@ -107,23 +120,7 @@ max_rootfinding_iterations = 1000
 max_bisections = 5
 ```
 
-2. `ORR_input.txt`文件
-
-```
-surface_name	site_name	species_name	formation_energy	bulk_structure	frequencies	other_parameters	reference
-None	gas	pe	0.0	None	[]	[]	gas phase calcs
-None	gas	H2O	0.0	None	[]	[]	Hansen 2014
-None	gas	H2	0.0	None	[]	[]	Hansen 2014
-None	gas	O2	5.19	None	[]	[]	Hansen 2014
-Pt	a	O2	4.99	fcc	[]	[]	Hansen 2014
-Pt	dl	O2	5.19	fcc	[]	[]	Hansen 2014
-Pt	a	OOH	3.91	fcc	[]	[]	Hansen 2014
-Pt	a	O	1.7	fcc	[]	[]	Hansen 2014
-Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
-Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
-```
-
-3. `mkm_job.py`文件
+##### `mkm_job.py`文件
 
 #### 计算结果
 电流密度
