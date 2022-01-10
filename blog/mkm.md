@@ -125,4 +125,11 @@ Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
 
 3. `mkm_job.py`文件
 
+#### 计算结果
+电流密度
+![current_density](../graphic/current_density.svg)
+覆盖度
+![coverages](../graphic/coverages.svg)
+
+
 [[Back]](../)
