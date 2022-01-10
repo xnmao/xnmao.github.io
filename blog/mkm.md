@@ -124,9 +124,9 @@ max_bisections = 5
 ##### `mkm_job.py`文件
 
 #### 计算结果
-电流密度
-<img src="../graphic/ORR/current_density.svg" title="current density" width="85%" align=center />
-覆盖度
-<img src="../graphic/ORR/coverages.svg" title="coverages" width="85%" align=center />
+电流密度  
+<img src="../graphic/ORR/current_density.svg" title="current density" width="85%" align=center />  
+覆盖度  
+<img src="../graphic/ORR/coverages.svg" title="coverages" width="85%" align=center />  
 
 [[Back]](../)
