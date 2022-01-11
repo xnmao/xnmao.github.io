@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## 电催化微观动力学建模
+## 电催化微观动力学计算
 
 ### 设计ORR反应过程
 
@@ -57,8 +57,10 @@ layout: default
 假设所有反应中间体占据1个位点，即
 <center><img src="https://latex.codecogs.com/svg.image?\theta_{*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}&plus;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}=1" title="\theta_{*_{\mathrm{A}}}+\theta_{\mathrm{O}_{2} *_\mathrm{A}}+\theta_{\mathrm{OOH} *_{\mathrm{A}}}+\theta_{\mathrm{O} *_{\mathrm{A}}}+\theta_{\mathrm{OH} *_{\mathrm{A}}}=1" /></center>
 
-#### 求解速率方程
+### 求解速率方程
+使用[CatMAP](<https://catmap.readthedocs.io/en/latest/index.html>)，代码在本文最后一节**使用CatMAP求解速率方程**给出。
 
+### 数据分析
 #### 速控步近似
 在一系列的连续反应中，若其中有一步反应的速率最慢，它控制了总反应的速率，使反应的速率基本等于最慢一步的速率，则这最慢的一步反应称为速控步（rate controlling step）或决速步（rate determining step），即
 <center><img src="https://latex.codecogs.com/svg.image?r=\max\left(r_{1},r_{2},r_{3},r_{4},r_{5},r_{6}\right)" title="r=\max\left(r_{1},r_{2},r_{3},r_{4},r_{5},r_{6}\right)" /></center>
@@ -74,7 +76,7 @@ layout: default
 
 *Note 3: 计算表面活性位点密度时，又出现了coverage的概念，这与速率方程中的coverage似乎是容易混淆的。这里稍微区分一下它们的不同：1) 速率方程中的覆盖度，倾向于强调在1个位点上，每个中间体在这个位点都有一个覆盖率值，我把它们理解为统计意义上的出现概率，而所有状态之和为100%；2) 活性位点密度中的覆盖度，倾向于强调表面上的金属原子位点中有百分之多少成为了反应位点，分母为实际的表面金属原子位点总数。*
 
-### 使用CatMAP求解
+### 使用CatMAP求解速率方程
 
 #### 输入文件
 
