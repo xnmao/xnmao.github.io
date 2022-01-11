@@ -44,7 +44,14 @@ layout: default
 
 #### 稳态近似法（steady state approximation method）
 可以近似地认为在反应达到稳定状态后，中间体的浓度基本上不随时间而变化。对ORR过程中产生的中间体作稳态近似，得
-<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial&space;t}&space;=&space;r_{1}-r_{2}&space;=&space;0" title="\frac{\partial x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial t} = r_{1}-r_{2} = 0" /></center><center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{6}-r_{2}&space;=&space;0" title="\frac{\partial \theta_{*_{\mathrm{A}}}}{\partial t} = r_{6}-r_{2} = 0" /></center><center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}}{\partial&space;t}&space;=&space;r_{2}-r_{3}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{O}_{2} *_\mathrm{A}}}{\partial t} = r_{2}-r_{3} = 0" /></center><center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{3}-r_{4}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OOH} *_{\mathrm{A}}}}{\partial t} = r_{3}-r_{4} = 0" /></center><center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{4}-r_{5}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{O} *_{\mathrm{A}}}}{\partial t} = r_{4}-r_{5} = 0" /></center><center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{5}-r_{6}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OH} *_{\mathrm{A}}}}{\partial t} = r_{5}-r_{6} = 0" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial&space;t}&space;=&space;r_{1}-r_{2}&space;=&space;0" title="\frac{\partial x_{\mathrm{O}_{2}(\mathrm{dl})}}{\partial t} = r_{1}-r_{2} = 0" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{6}-r_{2}&space;=&space;0" title="\frac{\partial \theta_{*_{\mathrm{A}}}}{\partial t} = r_{6}-r_{2} = 0" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}}{\partial&space;t}&space;=&space;r_{2}-r_{3}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{O}_{2} *_\mathrm{A}}}{\partial t} = r_{2}-r_{3} = 0" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{3}-r_{4}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OOH} *_{\mathrm{A}}}}{\partial t} = r_{3}-r_{4} = 0" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{4}-r_{5}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{O} *_{\mathrm{A}}}}{\partial t} = r_{4}-r_{5} = 0" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{5}-r_{6}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OH} *_{\mathrm{A}}}}{\partial t} = r_{5}-r_{6} = 0" /></center>
+*notes: 除了反应物和生成物，其它中间体*
+*notes: 稳态时中间体浓度不随时间变化*
 
 #### 表面位点守恒（conservation of surface sites）
 假设所有反应中间体占据1个位点，即
@@ -63,6 +70,8 @@ layout: default
 #### 计算电流密度
 单位面积电极上通过的电流
 <center><img src="https://latex.codecogs.com/svg.image?j=e&space;\rho&space;\mathrm{TOF}_{e^{-}}" title="j=e \rho \mathrm{TOF}_{e^{-}}" /></center>
+其中，<img src="https://latex.codecogs.com/svg.image?\rho" title="\rho" />是表面活性位点密度，即单位面积上有多少个反应位点。对于**ORR on Pt(111)**，根据积分电荷（integrated charge），[Wang 2004](<https://doi.org/10.1021/jp037593v>)得出原子覆盖率（atomic coverage）为1/3。Pt的晶格常数为<img src="https://latex.codecogs.com/svg.image?a=2.77\&space;\mathrm{\AA}&space;" title="a=2.77\ \mathrm{\AA} " />，则包含1个Pt原子的Pt(111)1×1原胞表面积<img src="https://latex.codecogs.com/svg.image?A=6.65\&space;\mathrm{\AA}^{2}" title="A=6.65\ \mathrm{\AA}^{2}" />，该表面上有1/3个反应位点，即得表面活性位点密度<img src="https://latex.codecogs.com/svg.image?\rho=(1/3)/A" title="\rho=(1/3)/A" />
+*notes: 定义活性位点密度时，*
 
 ### 使用CatMAP求解
 
@@ -71,15 +80,15 @@ layout: default
 ##### `ORR_input.txt`文件
 ```
 surface_name	site_name	species_name	formation_energy	bulk_structure	frequencies	other_parameters	reference
-None	gas	pe	0.0	None	[]	[]	gas phase calcs
-None	gas	H2O	0.0	None	[]	[]	Hansen 2014
+None	gas	pe	0.00	None	[]	[]	gas phase calcs
+None	gas	H2O	0.00	None	[]	[]	Hansen 2014
 None	gas	O2	5.19	None	[]	[]	Hansen 2014
-Pt	a	O2	4.99	fcc	[]	[]	Hansen 2014
 Pt	dl	O2	5.19	fcc	[]	[]	Hansen 2014
+Pt	a	O2	4.99	fcc	[]	[]	Hansen 2014
 Pt	a	OOH	3.91	fcc	[]	[]	Hansen 2014
-Pt	a	O	1.7	fcc	[]	[]	Hansen 2014
+Pt	a	O	1.70	fcc	[]	[]	Hansen 2014
 Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
-Pt	dl	*	0.0	fcc	[]	[]	Hansen 2014
+Pt	dl	*	0.00	fcc	[]	[]	Hansen 2014
 ```
 <center><img src="../graphic/ORR/free_energy_diagram.svg" title="FED" width="75%"/></center>
 
