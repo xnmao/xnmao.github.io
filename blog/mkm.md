@@ -79,6 +79,7 @@ layout: default
 #### 输入文件
 
 ##### `ORR_input.txt`文件
+数据来自[Hansen 2014](<https://doi.org/10.1021/jp4100608>)
 ```
 surface_name	site_name	species_name	formation_energy	bulk_structure	frequencies	other_parameters	reference
 None	gas	pe	0.00	None	[]	[]	gas phase calcs
@@ -91,9 +92,11 @@ Pt	a	O	1.70	fcc	[]	[]	Hansen 2014
 Pt	a	OH	0.75	fcc	[]	[]	Hansen 2014
 Pt	dl	*	0.00	fcc	[]	[]	Hansen 2014
 ```
+使用[Nørskov 2004](<https://doi.org/10.1021/jp047349j>)提出的computational hydrogen electrode (CHE) model，可以画出free-energy diagram如下图所示
 <center><img src="../graphic/ORR/free_energy_diagram.svg" title="FED" width="75%"/></center>
 
 ##### `ORR.mkm`文件
+mkm文件中包含构建微观动力学模型所需要的所有参数。
 ```python
 scaler = 'ThermodynamicScaler' # use T/p/U as descriptors and treat energetics as a constant
 
@@ -135,8 +138,57 @@ tolerance = 1e-50
 max_rootfinding_iterations = 1000
 max_bisections = 5
 ```
+在代码中，<img src="https://latex.codecogs.com/svg.image?\mathrm{O}_{2}" title="\mathrm{O}_{2}" />从本体溶液中扩散到电极附近被写作一个化学步骤。因此，双电层（double layer）成为了一个“反应位点”。额外的位点守恒被隐性地包含在ORR过程中
+<center><img src="https://latex.codecogs.com/svg.image?\theta_{*\left(\mathrm{dl}\right)}&plus;\theta_{\mathrm{O}_{2}\left(\mathrm{dl}\right)}=1" title="\theta_{*\left(\mathrm{dl}\right)}+\theta_{\mathrm{O}_{2}\left(\mathrm{dl}\right)}=1" /></center>
+注意，关于化学式中的上下标和特殊符号，在代码中的表述会更加严谨。\*不是位点，而是空/没有吸附的意思，A和dl才是位点名称。
 
 ##### `mkm_job.py`文件
+py文件设定输入输出，运行微观动力学计算
+```python
+from catmap import ReactionModel, analyze
+import numpy as np
+from ase.build import fcc111
+from ase.units import C, m
+
+##### run model #####
+model = ReactionModel(
+    setup_file='ORR.mkm',
+    output_variables=['coverage', 'turnover_frequency',]
+)
+model.run()
+
+vm = analyze.VectorMap(model)
+##### plot TOF #####
+vm.plot_variable = 'turnover_frequency'
+labels = vm.get_labels()
+pts_cols = vm.get_pts_cols()
+print(labels)
+# ['H2O_g', 'O2_g', 'pe_g']
+
+U = pts_cols[0]
+i_pe = labels.index('pe_g') # 电子的索引
+TOF_pe = np.array(pts_cols[1][i_pe])
+
+cm = 1e-02*m
+e = 10**3/C # elementary charge in mC
+
+area = np.linalg.norm(np.cross(*fcc111('Pt', (1, 1, 1)).get_cell()[:2])) # 表面积
+area /= cm**2 # cm^-2
+rho = (1/3)/area # 每个1*1原胞表面有1/3个反应位点
+j = e*rho*TOF_pe # mA cm^-2
+
+##### plot coverage #####
+vm.plot_variable = 'coverage'
+labels = vm.get_labels()
+pts_cols = vm.get_pts_cols()
+print(labels)
+# ['O2_a', 'OH_a', 'OOH_a', 'O_a', 'O2_dl']
+
+U = pts_cols[0]
+i = 1 # OH_a
+label = labels[i]
+theta = pts_cols[1][i]
+```
 
 #### 计算结果
 电流密度
