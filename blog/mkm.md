@@ -50,8 +50,8 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{3}-r_{4}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OOH} *_{\mathrm{A}}}}{\partial t} = r_{3}-r_{4} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{4}-r_{5}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{O} *_{\mathrm{A}}}}{\partial t} = r_{4}-r_{5} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{5}-r_{6}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OH} *_{\mathrm{A}}}}{\partial t} = r_{5}-r_{6} = 0" /></center>
-*notes: 除了反应物和生成物，其它中间体*
-*notes: 稳态时中间体浓度不随时间变化*
+*Note 1: 除了反应物和生成物，其它中间体*
+*Note 2: 稳态时中间体浓度不随时间变化*
 
 #### 表面位点守恒（conservation of surface sites）
 假设所有反应中间体占据1个位点，即
@@ -70,8 +70,9 @@ layout: default
 #### 计算电流密度
 单位面积电极上通过的电流
 <center><img src="https://latex.codecogs.com/svg.image?j=e&space;\rho&space;\mathrm{TOF}_{e^{-}}" title="j=e \rho \mathrm{TOF}_{e^{-}}" /></center>
-其中，<img src="https://latex.codecogs.com/svg.image?\rho" title="\rho" />是表面活性位点密度，即单位面积上有多少个反应位点。对于**ORR on Pt(111)**，根据积分电荷（integrated charge），[Wang 2004](<https://doi.org/10.1021/jp037593v>)得出原子覆盖率（atomic coverage）为1/3。Pt的晶格常数为<img src="https://latex.codecogs.com/svg.image?a=2.77\&space;\mathrm{\AA}&space;" title="a=2.77\ \mathrm{\AA} " />，则包含1个Pt原子的Pt(111)1×1原胞表面积<img src="https://latex.codecogs.com/svg.image?A=6.65\&space;\mathrm{\AA}^{2}" title="A=6.65\ \mathrm{\AA}^{2}" />，该表面上有1/3个反应位点，即得表面活性位点密度<img src="https://latex.codecogs.com/svg.image?\rho=(1/3)/A" title="\rho=(1/3)/A" />
-*notes: 定义活性位点密度时，*
+其中，<img src="https://latex.codecogs.com/svg.image?\rho" title="\rho" />是表面活性位点密度，即单位面积上有多少个反应位点。对于**ORR on Pt(111)**，根据积分电荷（integrated charge），[Wang 2004](<https://doi.org/10.1021/jp037593v>)得出原子覆盖率（atomic coverage）为1/3。Pt的晶格常数为<img src="https://latex.codecogs.com/svg.image?a=2.77\&space;\mathrm{\AA}&space;" title="a=2.77\ \mathrm{\AA} " />，则包含1个Pt原子的Pt(111)1×1原胞表面积<img src="https://latex.codecogs.com/svg.image?A=6.65\&space;\mathrm{\AA}^{2}" title="A=6.65\ \mathrm{\AA}^{2}" />，该表面上有1/3个反应位点，即得表面活性位点密度<img src="https://latex.codecogs.com/svg.image?\rho=(1/3)/A" title="\rho=(1/3)/A" />。
+
+*Note 3: 计算表面活性位点密度时，又出现了coverage的概念，这与速率方程中的coverage似乎是容易混淆的。这里稍微区分一下它们的不同：1) 速率方程中的覆盖度，倾向于强调在1个位点上，每个中间体在这个位点都有一个覆盖率值，我把它们理解为统计意义上的出现概率，而所有状态之和为100%；2) 活性位点密度中的覆盖度，倾向于强调表面上的金属原子位点中有百分之多少成为了反应位点，分母为实际的表面金属原子位点总数。*
 
 ### 使用CatMAP求解
 
