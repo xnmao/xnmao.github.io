@@ -191,9 +191,12 @@ theta = pts_cols[1][i]
 ```
 
 #### 计算结果
-电流密度
+计算电流密度重现了[Hansen 2014](<https://doi.org/10.1021/jp4100608>)的结果。图b使用的数据与图a相同，只是为了计算Tafel斜率而作的进一步处理。
 <center><img src="../graphic/ORR/current_density.svg" title="current density" width="95%"/></center>
-覆盖度
+尽可能考虑完整的反应网络，包括其它反应路径、其它反应位点、其它反应产物，以及传质（扩散）等物理过程，可以使理论计算结果更加贴合实验现象。如有副产物，即可通过计算法拉第效率揭示产物选择性。
+
+不同外加电势下的理论覆盖度。图b使用的数据与图a相同，在log10标度下可以清晰地显示微量物种的覆盖度。
 <center><img src="../graphic/ORR/coverages.svg" title="coverages" width="95%"/></center>
+某物种A具有较高的覆盖度，代表该物种A难以转化为其它物种而使A大量地滞留在表面。A到其它物种的转化步骤成为决速步。
 
 [[Back]](../)
