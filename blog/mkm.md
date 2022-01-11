@@ -16,14 +16,21 @@ layout: default
 ### 建立微分方程
 
 #### 反应速率常数
-由过渡态理论计算反应速率常数<center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
+由过渡态理论计算反应速率常数
+<center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
 其中<img src="https://latex.codecogs.com/svg.image?G_{a,i}" title="G_{a,i}" />是**活化自由能**，包含活化焓和活化熵校正。这个值不易得到。  
-可以忽略活化熵，使用Arrhenius经验公式表达反应速率常数<center><img src="https://latex.codecogs.com/svg.image?k_{i}=\nu_{i}&space;\exp&space;\left(-\frac{E_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\nu_{i} \exp \left(-\frac{E_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
+可以忽略活化熵，使用Arrhenius经验公式表达反应速率常数
+<center><img src="https://latex.codecogs.com/svg.image?k_{i}=\nu_{i}&space;\exp&space;\left(-\frac{E_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\nu_{i} \exp \left(-\frac{E_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
 其中，<img src="https://latex.codecogs.com/svg.image?E_{a,i}" title="E_{a,i}" />是活化能，可以使用NEB方法直接计算过渡态电子能量获得，<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />是指前因子（pre-exponential factor），单位<img src="https://latex.codecogs.com/svg.image?\mathrm{s}^{-1}" title="\mathrm{s}^{-1}" />。对于ORR反应，<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />取值建议参考[Hansen 2014](<https://doi.org/10.1021/jp4100608>)的Table 2。<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />越小，对应反应步骤的时间尺度越大（慢）。由于溶剂重组（solvent reorganisation），吸附/脱附步骤的<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />取值会比中间体反应步骤小几个数量级。  
-计算电化学步骤的反应速率常数<center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}^{0}}{k_{\mathrm{B}}&space;T}\right)&space;\exp&space;\left(-\frac{e&space;\beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}^{0}}{k_{\mathrm{B}} T}\right) \exp \left(-\frac{e \beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}} T}\right)" /></center>
+
+相比于化学步骤，电化学步骤的反应速率常数计算公式中，多了一项外加电势的推动力
+<center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}^{0}}{k_{\mathrm{B}}&space;T}\right)&space;\exp&space;\left(-\frac{e&space;\beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}^{0}}{k_{\mathrm{B}} T}\right) \exp \left(-\frac{e \beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}} T}\right)" /></center>
+类似地，我们先用Arrhenius经验公式表达
+<center><img src="https://latex.codecogs.com/svg.image?k_{i}=A_{i}&space;\exp&space;\left(-\frac{E_{a,&space;i}^{0}}{k_{\mathrm{B}}&space;T}\right)&space;\exp&space;\left(-\frac{e&space;\beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=A_{i} \exp \left(-\frac{E_{a, i}^{0}}{k_{\mathrm{B}} T}\right) \exp \left(-\frac{e \beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}} T}\right)" /></center>
 其中，
-用Arrhenius经验公式表达<center><img src="https://latex.codecogs.com/svg.image?k_{i}=A_{i}&space;\exp&space;\left(-\frac{E_{a,&space;i}^{0}}{k_{\mathrm{B}}&space;T}\right)&space;\exp&space;\left(-\frac{e&space;\beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=A_{i} \exp \left(-\frac{E_{a, i}^{0}}{k_{\mathrm{B}} T}\right) \exp \left(-\frac{e \beta_{i}\left(U-U_{i}^{0}\right)}{k_{\mathrm{B}} T}\right)" /></center>
-其中，<center><img src="https://latex.codecogs.com/svg.image?U_{i}^{0}=-\frac{\Delta&space;G_{i}^{0}}{e}" title="U_{i}^{0}=-\frac{\Delta G_{i}^{0}}{e}" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?U_{i}^{0}=-\frac{\Delta&space;G_{i}^{0}}{e}" title="U_{i}^{0}=-\frac{\Delta G_{i}^{0}}{e}" /></center>
+
+
 逆反应速率常数<center><img src="https://latex.codecogs.com/svg.image?k_{-i}=\frac{k_{i}}{K_{i}}" title="k_{-i}=\frac{k_{i}}{K_{i}}" /></center>
 其中，平衡常数<center><img src="https://latex.codecogs.com/svg.image?K_{i}=\exp&space;\left(-\frac{\Delta&space;G_{i}}{k_{\mathrm{B}}&space;T}\right)" title="K_{i}=\exp \left(-\frac{\Delta G_{i}}{k_{\mathrm{B}} T}\right)" /></center>
 
