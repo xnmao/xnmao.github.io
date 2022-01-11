@@ -50,8 +50,8 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{3}-r_{4}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OOH} *_{\mathrm{A}}}}{\partial t} = r_{3}-r_{4} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{4}-r_{5}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{O} *_{\mathrm{A}}}}{\partial t} = r_{4}-r_{5} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\frac{\partial&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}}{\partial&space;t}&space;=&space;r_{5}-r_{6}&space;=&space;0" title="\frac{\partial \theta_{\mathrm{OH} *_{\mathrm{A}}}}{\partial t} = r_{5}-r_{6} = 0" /></center>
-*Note 1: 除了反应物和生成物，其它中间体*
-*Note 2: 稳态时中间体浓度不随时间变化*
+*Note 1: 一组完整的催化反应历程，一定会包含每个中间体的消除步骤。否则，没有销毁的中间体随时间变化率一定不等于0，就不能构成稳态平衡，比如支链爆炸。*  
+*Note 2: 稳态平衡下，中间体随时间变化率为0，意味着表面催化反应的整个过程中，表面位点的化学环境都是保持不变的，而不会有任意一个中间体存在独立的化学环境。*
 
 #### 表面位点守恒（conservation of surface sites）
 假设所有反应中间体占据1个位点，即
