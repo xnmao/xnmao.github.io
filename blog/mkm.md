@@ -18,7 +18,7 @@ layout: default
 #### 反应速率常数
 由过渡态理论计算反应速率常数
 <center><img src="https://latex.codecogs.com/svg.image?k_{i}=\frac{k_{\mathrm{B}}&space;T}{h}&space;\exp&space;\left(-\frac{G_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\frac{k_{\mathrm{B}} T}{h} \exp \left(-\frac{G_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
-其中<img src="https://latex.codecogs.com/svg.image?G_{a,i}" title="G_{a,i}" />是**活化自由能**，包含活化焓和活化熵校正。这个值不易得到。**如果忽略活化熵**，使用Arrhenius经验公式表达反应速率常数
+其中<img src="https://latex.codecogs.com/svg.image?G_{a,i}" title="G_{a,i}" />是**活化自由能**，包含活化焓和活化熵校正。这个值不易得到。通常可以忽略活化熵，使用Arrhenius经验公式表达反应速率常数
 <center><img src="https://latex.codecogs.com/svg.image?k_{i}=\nu_{i}&space;\exp&space;\left(-\frac{E_{a,&space;i}}{k_{\mathrm{B}}&space;T}\right)" title="k_{i}=\nu_{i} \exp \left(-\frac{E_{a, i}}{k_{\mathrm{B}} T}\right)" /></center>
 其中，<img src="https://latex.codecogs.com/svg.image?E_{a,i}" title="E_{a,i}" />是活化能，可以使用NEB方法计算过渡态电子能量获得，<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />是指前因子（pre-exponential factor），单位<img src="https://latex.codecogs.com/svg.image?\mathrm{s}^{-1}" title="\mathrm{s}^{-1}" />。<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />越小，对应反应步骤的时间尺度越大（慢）。由于溶剂重组（solvent reorganisation），吸附/脱附步骤的<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />取值会比中间体反应步骤小几个数量级。对于ORR反应，<img src="https://latex.codecogs.com/svg.image?\nu_{i}" title="\nu_{i}" />取值建议参考[Hansen 2014](<https://doi.org/10.1021/jp4100608>)的Table 2。
 
