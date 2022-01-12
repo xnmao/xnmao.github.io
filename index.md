@@ -5,6 +5,7 @@ layout: default
 # Home
 
 ## Blog
+* [Henry定律](./blog/Henry.md)
 * [电化学笔记](./blog/electrochemistry.md)
 * [构建BC3纳米管](./blog/tube.md)
 * [计算工具](./blog/tools.md)
