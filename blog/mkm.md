@@ -73,7 +73,7 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" title="\mathrm{TOF}_{\mathrm{H}_{2}\mathrm{O}}=2r" /></center>
 
 ### 求解速率方程
-使用[CatMAP](<https://catmap.readthedocs.io/en/latest/index.html>)，代码在本文最后一节**使用CatMAP求解速率方程**给出。
+动力学模型是一组耦合的常微分方程组ODEs（ordinary differential equations），使用[CatMAP](<https://catmap.readthedocs.io/en/latest/index.html>)进行数值求解，代码在本文最后一节**使用CatMAP求解速率方程**给出。
 
 ### 计算电流密度
 单位面积电极上通过的电流
