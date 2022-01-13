@@ -63,7 +63,7 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?\theta_{*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}_{2}&space;*_\mathrm{A}}&plus;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&plus;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}=1" title="\theta_{*_{\mathrm{A}}}+\theta_{\mathrm{O}_{2} *_\mathrm{A}}+\theta_{\mathrm{OOH} *_{\mathrm{A}}}+\theta_{\mathrm{O} *_{\mathrm{A}}}+\theta_{\mathrm{OH} *_{\mathrm{A}}}=1" /></center>
 
 #### 速控步近似
-在一系列的连续反应（consecutive reaction）中，若其中有一步反应的速率最慢，它控制了总反应的速率，使反应的速率基本等于最慢一步的速率，则这最慢的一步反应称为速控步（rate controlling step）或决速步RDS（rate determining step）。例如，我们算得第3步的反应速率最小，则有总反应的速率为
+在一系列的连续反应（consecutive reaction）中，若其中有一步反应的速率最慢，它控制了总反应的速率，使反应的速率基本等于最慢一步的速率，则这最慢的一步反应称为速控步（rate controlling step）或决速步RDS（rate determining step）。例如，我们算得第3步是速控步，则有总反应的速率为
 <center><img src="https://latex.codecogs.com/svg.image?r&space;=&space;r_{3}&space;=&space;k_{3}&space;\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}-k_{-3}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}" title="r = r_{3} = k_{3} \theta_{\mathrm{O}_{2} *_{\mathrm{A}}}-k_{-3} \theta_{\mathrm{OOH} *_{\mathrm{A}}}" /></center>
 式中存在两个中间产物的浓度项<img src="https://latex.codecogs.com/svg.image?\theta_{\mathrm{O}_{2}&space;*_{\mathrm{A}}}" title="\theta_{\mathrm{O}_{2} *_{\mathrm{A}}}" />和<img src="https://latex.codecogs.com/svg.image?\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}" title="\theta_{\mathrm{OOH} *_{\mathrm{A}}}" />，可通过平衡假设（equilibrium hypothesis）求出它们的值。即，假定其余快速平衡反应正、逆向反应间的平衡关系依然存在，从而可以利用平衡常数<img src="https://latex.codecogs.com/svg.image?K_{i}" title="K_{i}" />及反应物浓度来求出中间产物的浓度
 <center><img src="https://latex.codecogs.com/svg.image?r_{1}&space;=&space;k_{1}&space;x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1}&space;x_{\mathrm{O}_{2}(\mathrm{dl})}&space;=&space;0" title="r_{1} = k_{1} x_{\mathrm{O}_{2}(\mathrm{aq})}-k_{-1} x_{\mathrm{O}_{2}(\mathrm{dl})} = 0" /></center>
@@ -71,7 +71,7 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?r_{4}&space;=&space;k_{4}&space;\theta_{\mathrm{OOH}&space;*_{\mathrm{A}}}-k_{-4}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}&space;=&space;0" title="r_{4} = k_{4} \theta_{\mathrm{OOH} *_{\mathrm{A}}}-k_{-4} x_{\mathrm{H}_{2} \mathrm{O}} \theta_{\mathrm{O} *_{\mathrm{A}}} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?r_{5}&space;=&space;k_{5}&space;\theta_{\mathrm{O}&space;*_{\mathrm{A}}}-k_{-5}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}&space;=&space;0" title="r_{5} = k_{5} \theta_{\mathrm{O} *_{\mathrm{A}}}-k_{-5} \theta_{\mathrm{OH} *_{\mathrm{A}}} = 0" /></center>
 <center><img src="https://latex.codecogs.com/svg.image?r_{6}&space;=&space;k_{6}&space;\theta_{\mathrm{OH}&space;*_{\mathrm{A}}}-k_{-6}&space;\theta_{*_{\mathrm{A}}}&space;x_{\mathrm{H}_{2}&space;\mathrm{O}}&space;=&space;0" title="r_{6} = k_{6} \theta_{\mathrm{OH} *_{\mathrm{A}}}-k_{-6} \theta_{*_{\mathrm{A}}} x_{\mathrm{H}_{2} \mathrm{O}} = 0" /></center>
-注意，我们当前设计的ORR反应过程是一组连续反应。如果考虑平行反应（parallel reaction），如存在第7步与第4步是两个平行反应，则还须比较<img src="https://latex.codecogs.com/svg.image?r_{7}" title="r_{7}" />与<img src="https://latex.codecogs.com/svg.image?r_{4}" title="r_{4}" />，由更快一步的速率决定反应的路径。
+注意，我们当前设计的ORR反应过程是一组连续反应。如果考虑平行反应（parallel reaction），如存在第7步与第4步是两个平行反应，则还须比较这两步，由速率更快的一步决定反应的路径。
 
 转换频率TOF（turnover frequency）是指，在单位时间（秒）内，每个活性位点转化的分子数目
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{TOF}_{\mathrm{H}^{&plus;}}=\mathrm{TOF}_{e^{-}}=-4r" title="\mathrm{TOF}_{\mathrm{H}^{+}}=\mathrm{TOF}_{e^{-}}=-4r" /></center>
@@ -212,5 +212,11 @@ theta = pts_cols[1][i]
 不同外加电势下的理论覆盖度。图b使用的数据与图a相同，在log10标度下可以清晰地显示微量物种的覆盖度。
 <center><img src="../graphic/ORR/coverages.svg" title="coverages" width="95%"/></center>
 某物种A具有较高的覆盖度，代表该物种A难以转化为其它物种而使A大量地滞留在表面。A到其它物种的转化步骤成为决速步。
+
+### 存在的难点
+1. 如何设计反应步骤，尤其是应该考虑哪些过渡态。
+2. 怎样确定基元反应的指前因子。
+3. 如何确定反应物和生成物的气压。
+4. 如何修正pH效应。
 
 [[Back]](../)
