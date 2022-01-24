@@ -14,4 +14,6 @@ layout: default
 
 现在，我有两个问题：1. 这个公式可以通过<img src="http://latex.codecogs.com/svg.latex?k_{\rm{B}}T\ln[\rm{H^{+}}]" />外推到其它pH条件吗？可以的话，如何修改公式？这样得到的结果会不会与酸性条件相同？2. ORR的工作电位怎么理解？为什么不与0 V或者applied potential 1.23-0.33=0.9 V对比？在HER/OER/CO2RR中，都是直接与理论过电势对比吗？
 
+https://doi.org/10.1016/j.electacta.2007.02.082
+
 [[Back]](../)
