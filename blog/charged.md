@@ -44,7 +44,25 @@ from ase.units import kJ, mol
 |   HNO3  |   l   |     -174.1     |      155.6      | -80.7 | 5-29 |
 
 我们发现，有些数据的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />没有给出，所以我们需要计算它们
+标准摩尔吉布斯生成自由能的定义是从最稳定的单质给出，因此，我们可以根据这个反应式
 
+计算出<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />为`(0-0.5*0)-298.15*(0-0.5*130.680)*1e-03`
+同样地，根据这个反应式
+
+计算出<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" />为`(-206.85-0.5*0-1.5*0)-298.15*(146.70-0.5*191.609-1.5*205.152)*1e-03`
+
+然后我们就可以填完这张表格
+
+| Species | State |        H       |        S        |    G    | Page |
+|:-------:|:-----:|:--------------:|:---------------:|:-------:|:----:|
+|    H+   |   aq  |        0       |        0        | 19.4811 |  5-1 |
+|    H2   |   g   |        0       | 130.680 ± 0.003 |         |  5-1 |
+|   NO3-  |   aq  | -206.85 ± 0.40 |  146.70 ± 0.40  | -130.28 |  5-1 |
+|    N2   |   g   |        0       | 191.609 ± 0.004 |         |  5-1 |
+|    O2   |   g   |        0       | 205.152 ± 0.005 |         |  5-1 |
+|   HNO3  |   l   |     -174.1     |      155.6      |  -80.7  | 5-29 |
+
+所以，根据反应式2，我们计算出电离能为30.09，即0.312 eV。
 
 ### 参考
 Sander, R.: Compilation of Henry's law constants (version 4.0) for water as solvent, Atmos. Chem. Phys., 15, 4399–4981, [https://doi.org/10.5194/acp-15-4399-2015](<https://acp.copernicus.org/articles/15/4399/2015/>), 2015.
