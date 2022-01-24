@@ -19,10 +19,12 @@ layout: default
 这样我们就从DFT可计算的气态HNO3，得到了NO3-物质。
 接下来我们去计算它们的能量。
 第一步反应参考CRC P5-29，摘录如下
-| Name | <img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}/\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}/\mathrm{kJ\!\cdot\!mol^{-1}}" /> |
+
+| Species | <img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}/\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}/\mathrm{kJ\!\cdot\!mol^{-1}}" /> |
 |:---:|:---:|
 | <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" /> | -80.7 |
 | <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" /> | -73.5 |
+
 由此可得，第一步反应的吉布斯自由能为
 ```Python
 from ase.units import kJ, mol
