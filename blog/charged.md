@@ -20,17 +20,30 @@ layout: default
 接下来我们去计算它们的能量。
 第一步反应参考CRC P5-29，摘录如下
 
-| Species | <img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}/\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}/\mathrm{kJ\!\cdot\!mol^{-1}}" /> |
-|:---:|:---:|
-| <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" /> | -80.7 |
-| <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" /> | -73.5 |
+| Species | State |   G   |
+|:-------:|:-----:|:-----:|
+|   HNO3  |   l   | -80.7 |
+|   HNO3  |   g   | -73.5 |
 
 由此可得，第一步反应的吉布斯自由能为
-```Python
+```python
 from ase.units import kJ, mol
 (-73.5-(-80.7))*kJ/mol
 # 0.07462274093792334
 ```
+
+接下来，我们从CRC P5-1和P5-29摘录数据如下
+
+| Species | State |        H       |        S        |   G   | Page |
+|:-------:|:-----:|:--------------:|:---------------:|:-----:|:----:|
+|    H+   |   aq  |        0       |        0        |       |  5-1 |
+|    H2   |   g   |        0       | 130.680 ± 0.003 |       |  5-1 |
+|   NO3-  |   aq  | -206.85 ± 0.40 |  146.70 ± 0.40  |       |  5-1 |
+|    N2   |   g   |        0       | 191.609 ± 0.004 |       |  5-1 |
+|    O2   |   g   |        0       | 205.152 ± 0.005 |       |  5-1 |
+|   HNO3  |   l   |     -174.1     |      155.6      | -80.7 | 5-29 |
+
+我们发现，有些数据的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />没有给出，所以我们需要计算它们
 
 
 ### 参考
