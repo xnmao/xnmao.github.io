@@ -27,9 +27,13 @@ layout: default
 
 由此可得，第一步反应的吉布斯自由能为
 ```python
-from ase.units import kJ, mol
-(-73.5-(-80.7))*kJ/mol
-# 0.07462274093792334
+from ase.units import kJ, J, mol
+
+G_HNO3_l = -80.7*kJ/mol
+G_HNO3_g = -73.5*kJ/mol
+
+G_1 = G_HNO3_l - G_HNO3_g
+print(G_1) # -0.07462274093792332
 ```
 
 接下来，我们从CRC P5-1和P5-29摘录数据如下
@@ -50,17 +54,17 @@ from ase.units import kJ, mol
 <center><img src="https://latex.codecogs.com/svg.image?\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;=&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})&space;-&space;T\left(\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" title="\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) = \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2}) - T\left(\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" /></center>
 代入数据
 ```python
-H_H = 0*kJ/mol
-S_H = 0*J/mol
-H_H2 = 0*kJ/mol
-S_H2 = 130.680*J/mol
+H_H_aq = 0*kJ/mol
+S_H_aq = 0*J/mol
+H_H2_g = 0*kJ/mol
+S_H2_g = 130.680*J/mol
 T = 298.15
 
-n_H = 1
-n_H2 = -0.5
+n_H_aq = 1
+n_H2_g = -0.5
 
-G_H = (n_H*H_H+n_H2*H_H2) - T*(n_H*S_H+n_H2*S_H2)
-print(G_H) # 0.20190758966157468
+G_H_aq = (n_H_aq*H_H_aq+n_H2_g*H_H2_g) - T*(n_H_aq*S_H_aq+n_H2_g*S_H2_g)
+print(G_H_aq) # 0.20190758966157468
 ```
 计算出<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />为`(0-0.5*0)-298.15*(0-0.5*130.680)*1e-03`
 同样地，根据这个反应式
@@ -69,20 +73,20 @@ print(G_H) # 0.20190758966157468
 <center><img src="https://latex.codecogs.com/svg.image?\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})&space;=&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})&space;-&space;\frac{1}{2}\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{N}_{2})&space;-&space;\frac{3}{2}\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{O}_{2})&space;-&space;T\left(\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})&space;-&space;\frac{1}{2}\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{N}_{2})&space;-&space;\frac{3}{2}\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{O}_{2})\right)" title="\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-}) = \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-}) - \frac{1}{2}\Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{N}_{2}) - \frac{3}{2}\Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{O}_{2}) - T\left(\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-}) - \frac{1}{2}\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{N}_{2}) - \frac{3}{2}\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{O}_{2})\right)" /></center>
 代入数据
 ```python
-H_NO3 = -206.85*kJ/mol
-S_NO3 = 146.70*J/mol
-H_N2 = 0*kJ/mol
-S_N2 = 191.609*J/mol
-H_O2 = 0*kJ/mol
-S_O2 = 205.152*J/mol
+H_NO3_aq = -206.85*kJ/mol
+S_NO3_aq = 146.70*J/mol
+H_N2_g = 0*kJ/mol
+S_N2_g = 191.609*J/mol
+H_O2_g = 0*kJ/mol
+S_O2_g = 205.152*J/mol
 T = 298.15
 
-n_NO3 = 1
-n_N2 = -0.5
-n_O2 = -1.5
+n_NO3_aq = 1
+n_N2_g = -0.5
+n_O2_g = -1.5
 
-G_NO3 = (n_NO3*H_NO3+n_N2*H_N2+n_O2*H_O2) - T*(n_NO3*S_NO3+n_N2*S_N2+n_O2*S_O2)
-print(G_NO3) # -1.3502092622062178
+G_NO3_aq = (n_NO3_aq*H_NO3_aq+n_N2_g*H_N2_g+n_O2_g*H_O2_g) - T*(n_NO3_aq*S_NO3_aq+n_N2_g*S_N2_g+n_O2_g*S_O2_g)
+print(G_NO3_aq) # -1.3502092622062178
 ```
 计算出<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" />为`(-206.85-0.5*0-1.5*0)-298.15*(146.70-0.5*191.609-1.5*205.152)*1e-03`
 
@@ -97,7 +101,12 @@ print(G_NO3) # -1.3502092622062178
 |    O2   |   g   |        0       | 205.152 ± 0.005 |         |  5-1 |
 |   HNO3  |   l   |     -174.1     |      155.6      |  -80.7  | 5-29 |
 
-所以，根据反应式2，我们计算出电离能为30.09，即0.312 eV。
+所以，根据反应式2，我们计算出电离能为30.09，
+```python
+G_2 = G_NO3_aq + G_H_aq - G_HNO3_l
+print(G_2) # -0.3119051178654192
+```
+即0.312 eV。
 
 ### 参考
 Sander, R.: Compilation of Henry's law constants (version 4.0) for water as solvent, Atmos. Chem. Phys., 15, 4399–4981, [https://doi.org/10.5194/acp-15-4399-2015](<https://acp.copernicus.org/articles/15/4399/2015/>), 2015.
