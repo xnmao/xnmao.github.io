@@ -48,6 +48,20 @@ from ase.units import kJ, mol
 <center><img src="https://latex.codecogs.com/svg.image?\frac{1}{2}\mathrm{H}_{2}(\mathrm{g},~p^{\ominus})&space;\rightarrow&space;\mathrm{H}^{&plus;}(\mathrm{aq},~p^{\ominus})&space;&plus;&space;e^{-}" title="\frac{1}{2}\mathrm{H}_{2}(\mathrm{g},~p^{\ominus}) \rightarrow \mathrm{H}^{+}(\mathrm{aq},~p^{\ominus}) + e^{-}" /></center>
 即计算
 <center><img src="https://latex.codecogs.com/svg.image?\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;=&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})&space;-&space;T\left(\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" title="\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) = \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2}) - T\left(\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" /></center>
+代入数据
+```python
+H_proton = 0*kJ/mol
+S_proton = 0*kJ/mol
+H_hydrogen = 0*J/mol
+S_hydrogen = 130.680*J/mol
+T = 298.15
+
+n_proton = 1
+n_hydrogen = -0.5
+
+G_proton = (n_proton*H_proton+n_hydrogen*H_hydrogen) - T*(n_proton*S_proton+n_hydrogen*S_hydrogen)
+print(G_proton) # 0.20190758966157468 eV
+```
 计算出<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />为`(0-0.5*0)-298.15*(0-0.5*130.680)*1e-03`
 同样地，根据这个反应式
 <center><img src="https://latex.codecogs.com/svg.image?\frac{1}{2}\mathrm{N}_{2}(\mathrm{g},~p^{\ominus})&space;&plus;&space;\frac{3}{2}\mathrm{O}_{2}(\mathrm{g},~p^{\ominus})&space;&plus;&space;e^{-}&space;\rightarrow&space;\mathrm{NO}_{3}^{-}(\mathrm{aq},~p^{\ominus})" title="\frac{1}{2}\mathrm{N}_{2}(\mathrm{g},~p^{\ominus}) + \frac{3}{2}\mathrm{O}_{2}(\mathrm{g},~p^{\ominus}) + e^{-} \rightarrow \mathrm{NO}_{3}^{-}(\mathrm{aq},~p^{\ominus})" /></center>
