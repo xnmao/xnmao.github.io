@@ -2,19 +2,13 @@
 layout: default
 ---
 
-## 带电离子的自由能校正
+## 带电离子的自由能校正方法
 
-### 参考文献
-[Niu 2020](<https://doi.org/10.1002/adfm.202008533>)
-[Liu 2019](<https://doi.org/10.1021/acscatal.9b02179>)
-[Guo 2018](<https://doi.org/10.1021/acscatal.7b01371>)
-[Calle-Vallejo 2013](<https://doi.org/10.1039/C2CP44620K>)
+### 引言
+电催化硝酸盐还原NO3RR（electrocatalytic nitrate reduction）的理论计算所考虑的吉布斯自由能，是相对于溶液中的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />离子能量。但是，DFT计算带电离子是相当不靠谱的。所以，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的自由能需要从气相<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的自由能推导。DFT可以计算电中性气相分子<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />。NO3RR相关文献可参考[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)、[Liu(2019)](<https://doi.org/10.1021/acscatal.9b02179>)、[Guo(2018)](<https://doi.org/10.1021/acscatal.7b01371>)、[Calle-Vallejo(2013)](<https://doi.org/10.1039/C2CP44620K>)。这篇博客的目的是复现[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)的Page S2中给出的计算方法。
 
-### 为什么
-在电催化硝酸盐还原NO3RR（electrocatalytic nitrate reduction）的理论计算中，自由能相对于溶液中的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />离子能量。但是，DFT计算带电离子是相当不靠谱的。所以，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的自由能需要从气相<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的自由能推导。DFT可以计算电中性气相分子<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />。
-
-### 所以
-根据[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)在Page S2中给出的描述，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />从如下两步反应得到：
+### 计算方法
+根据[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)的Page S2中给出的描述，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />从如下两步反应得到：
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{g})&space;\overset{1}{\rightarrow}&space;\mathrm{HNO}_{3}(\mathrm{l})&space;" title="\mathrm{HNO}_{3}(\mathrm{g}) \overset{1}{\rightarrow} \mathrm{HNO}_{3}(\mathrm{l}) " /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{l})&space;\overset{2}{\rightarrow}&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\mathrm{HNO}_{3}(\mathrm{l}) \overset{2}{\rightarrow} \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
 接下来就只需要计算这两步反应的标准摩尔反应吉布斯自由能之和，就可以得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能变化值。
@@ -26,10 +20,17 @@ layout: default
 |   HNO3  |   l   | -80.7 |
 |   HNO3  |   g   | -73.5 |
 
+单位换算
+```python
+# taken from the 2014 version of the CODATA suggestions
+mol = 6.022140857e23
+e = 1.6021766208e-19 # C
+kJ = 1000.0/e # eV
+J = kJ/1000
+K = 1.0
+```
 代入数据，计算第1步反应的吉布斯自由能变化值，单位eV：
 ```python
-from ase.units import kJ, J, mol
-
 G_HNO3_l = -80.7*kJ/mol
 G_HNO3_g = -73.5*kJ/mol
 
@@ -55,10 +56,10 @@ print(G_1) # -0.07462274093792332
 代入数据：
 ```python
 H_H_aq = 0*kJ/mol
-S_H_aq = 0*J/mol
+S_H_aq = 0*J/mol/K
 H_H2_g = 0*kJ/mol
-S_H2_g = 130.680*J/mol
-T = 298.15
+S_H2_g = 130.680*J/mol/K
+T = 298.15*K
 
 n_H_aq = 1
 n_H2_g = -0.5
@@ -75,12 +76,12 @@ print(G_H_aq) # 0.20190758966157468
 代入数据：
 ```python
 H_NO3_aq = -206.85*kJ/mol
-S_NO3_aq = 146.70*J/mol
+S_NO3_aq = 146.70*J/mol/K
 H_N2_g = 0*kJ/mol
-S_N2_g = 191.609*J/mol
+S_N2_g = 191.609*J/mol/K
 H_O2_g = 0*kJ/mol
-S_O2_g = 205.152*J/mol
-T = 298.15
+S_O2_g = 205.152*J/mol/K
+T = 298.15*K
 
 n_NO3_aq = 1
 n_N2_g = -0.5
