@@ -8,9 +8,10 @@ layout: default
 [Niu 2020](<https://doi.org/10.1002/adfm.202008533>)
 [Liu 2019](<https://doi.org/10.1021/acscatal.9b02179>)
 [Guo 2018](<https://doi.org/10.1021/acscatal.7b01371>)
+[Calle-Vallejo 2013](<https://doi.org/10.1039/C2CP44620K>)
 
 ### 为什么
-电催化硝酸盐还原electrocatalytic nitrate reduction (NO3RR)的理论计算中涉及NO3-带电体系的计算，这个带电体系的能量是如何来的。
+在电催化硝酸盐还原NO3RR（electrocatalytic nitrate reduction）的理论计算中，自由能相对于溶液中的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />离子能量。但是，DFT计算带电离子是相当不靠谱的。所以，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的自由能需要从气相<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的自由能推导。DFT可以计算电中性气相分子<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />。
 
 ### 所以
 考虑NO3是怎么来的
