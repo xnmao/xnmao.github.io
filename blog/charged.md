@@ -14,8 +14,8 @@ layout: default
 
 ### 所以
 考虑NO3是怎么来的
-<center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{g})&space;\rightarrow&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\mathrm{HNO}_{3}(\mathrm{g}) \rightarrow \mathrm{HNO}_{3}(\mathrm{l})" /></center>
-<center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{l})&space;\rightarrow&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\mathrm{HNO}_{3}(\mathrm{l}) \rightarrow \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{g})&space;\overset{1}{\rightarrow}&space;\mathrm{HNO}_{3}(\mathrm{l})&space;" title="\mathrm{HNO}_{3}(\mathrm{g}) \overset{1}{\rightarrow} \mathrm{HNO}_{3}(\mathrm{l}) " /></center>
+<center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{l})&space;\overset{2}{\rightarrow}&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\mathrm{HNO}_{3}(\mathrm{l}) \overset{2}{\rightarrow} \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
 这样我们就从DFT可计算的气态HNO3，得到了NO3-物质。
 接下来我们去计算它们的能量。
 第一步反应参考CRC P5-29，摘录如下
