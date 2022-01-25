@@ -19,7 +19,7 @@ layout: default
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{l})&space;\overset{2}{\rightarrow}&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\mathrm{HNO}_{3}(\mathrm{l}) \overset{2}{\rightarrow} \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
 接下来就只需要计算这两步反应的标准摩尔吉布斯反应自由能之和，就可以得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能变化值。
 
-计算第1步反应的自由能，只需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册的5-29页，分别得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" />的标准摩尔吉布斯生成自由能，单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />，摘录如下：
+计算第1步反应的吉布斯自由能变化值，只需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册的5-29页，分别得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" />的标准摩尔生成吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />，单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />，摘录如下：
 
 | Species | State |   G   |
 |:-------:|:-----:|:-----:|
@@ -37,7 +37,8 @@ G_1 = G_HNO3_l - G_HNO3_g
 print(G_1) # -0.07462274093792332
 ```
 
-接下来，我们从CRC P5-1和P5-29摘录数据如下
+计算第2步反应的吉布斯自由能变化值，需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册的5-1页和5-29页。
+标准摩尔吉布斯生成焓<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}" title="\inline \inline \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />）、标准摩尔熵<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\Delta&space;S_{\mathrm{m}}^{\ominus}" title="\inline \inline \Delta S_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}\!\cdot\!K^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}\!\cdot\!K^{-1}}" />）、标准摩尔生成吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />），摘录如下：
 
 | Species | State |        H       |        S        |   G   | Page |
 |:-------:|:-----:|:--------------:|:---------------:|:-----:|:----:|
@@ -49,7 +50,7 @@ print(G_1) # -0.07462274093792332
 |   HNO3  |   l   |     -174.1     |      155.6      | -80.7 | 5-29 |
 
 我们发现，有些数据的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />没有给出，所以我们需要计算它们
-标准摩尔吉布斯生成自由能的定义是从最稳定的单质给出，因此，我们可以根据这个反应式
+标准摩尔生成吉布斯自由能的定义是从最稳定的单质给出，因此，我们可以根据这个反应式
 <center><img src="https://latex.codecogs.com/svg.image?\frac{1}{2}\mathrm{H}_{2}(\mathrm{g},~p^{\ominus})&space;\rightarrow&space;\mathrm{H}^{&plus;}(\mathrm{aq},~p^{\ominus})&space;&plus;&space;e^{-}" title="\frac{1}{2}\mathrm{H}_{2}(\mathrm{g},~p^{\ominus}) \rightarrow \mathrm{H}^{+}(\mathrm{aq},~p^{\ominus}) + e^{-}" /></center>
 即计算
 <center><img src="https://latex.codecogs.com/svg.image?\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;=&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})&space;-&space;T\left(\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" title="\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) = \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2}) - T\left(\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" /></center>
