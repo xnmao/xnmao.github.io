@@ -5,7 +5,7 @@ layout: default
 # Home
 
 ## Blog
-* [带电离子的自由能校正](./blog/charged.md)
+* [带电离子的自由能校正方法](./blog/charged.md)
 * [Henry定律](./blog/Henry.md)
 * [电化学笔记](./blog/electrochemistry.md)
 * [构建BC3纳米管](./blog/tube.md)

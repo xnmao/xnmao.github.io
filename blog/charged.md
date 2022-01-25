@@ -48,7 +48,9 @@ print(G_1) # -0.07462274093792332
 |    O2   |   g   |        0       | 205.152 ± 0.005 |       |  5-1 |
 |   HNO3  |   l   |     -174.1     |      155.6      | -80.7 | 5-29 |
 
-手册没有给出某些物质的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />值。所以，我们需要从标准摩尔生成吉布斯自由能的定义出发，计算<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" />。根据如下反应：
+手册没有给出某些物质的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />值。所以，我们需要从标准摩尔生成吉布斯自由能的定义出发，计算<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" />。
+
+根据如下反应：
 <center><img src="https://latex.codecogs.com/svg.image?\frac{1}{2}\mathrm{H}_{2}(\mathrm{g},~p^{\ominus})&space;\rightarrow&space;\mathrm{H}^{&plus;}(\mathrm{aq},~p^{\ominus})&space;&plus;&space;e^{-}" title="\frac{1}{2}\mathrm{H}_{2}(\mathrm{g},~p^{\ominus}) \rightarrow \mathrm{H}^{+}(\mathrm{aq},~p^{\ominus}) + e^{-}" /></center>
 可计算：
 <center><img src="https://latex.codecogs.com/svg.image?\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;=&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})&space;-&space;T\left(\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})&space;-&space;\frac{1}{2}\Delta&space;S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" title="\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) = \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2}) - T\left(\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+}) - \frac{1}{2}\Delta S_{\mathrm{m}}^{\ominus}(\mathrm{H}_{2})\right)" /></center>
@@ -122,7 +124,7 @@ print(G_corr) # -0.3865278588033425
 <center><img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})&space;\rightarrow&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\inline \mathrm{HNO}_{3}(\mathrm{g}) \rightarrow \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
 计算结果是一样的。那考虑<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的相变有什么意义呢？
 
-#### 这个方法本身有何意义
+#### 为什么NO3RR要用这个方法
 我发现只有NO3RR的理论计算会强调使用<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的能量而不是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的能量。
 
 参考态的能量需要基于同一标准。比如，中性溶液中CO2被还原成HCOOH。即使溶液中实际存在的是碳酸根和甲酸根，Nørskov的方法也是基于酸性假设，计算CO2和HCOOH的能量。因为它们在RHE标度上，热力学关系是始终不变的。同样地，HNO3和产物NH3在RHE标度上，热力学关系也应是不变的。那为什么要强调<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />呢？
