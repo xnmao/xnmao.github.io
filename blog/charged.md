@@ -14,19 +14,19 @@ layout: default
 在电催化硝酸盐还原NO3RR（electrocatalytic nitrate reduction）的理论计算中，自由能相对于溶液中的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />离子能量。但是，DFT计算带电离子是相当不靠谱的。所以，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的自由能需要从气相<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的自由能推导。DFT可以计算电中性气相分子<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />。
 
 ### 所以
-考虑NO3是怎么来的
+根据[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)在Page S2中给出的描述，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />从如下两步反应得到：
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{g})&space;\overset{1}{\rightarrow}&space;\mathrm{HNO}_{3}(\mathrm{l})&space;" title="\mathrm{HNO}_{3}(\mathrm{g}) \overset{1}{\rightarrow} \mathrm{HNO}_{3}(\mathrm{l}) " /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{l})&space;\overset{2}{\rightarrow}&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\mathrm{HNO}_{3}(\mathrm{l}) \overset{2}{\rightarrow} \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
-这样我们就从DFT可计算的气态HNO3，得到了NO3-物质。
-接下来我们去计算它们的能量。
-第一步反应参考CRC P5-29，摘录如下
+接下来就只需要计算这两步反应的标准摩尔吉布斯反应自由能之和，就可以得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能变化值。
+
+计算第1步反应的自由能，只需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册的5-29页，分别得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" />的标准摩尔吉布斯生成自由能，单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />，摘录如下：
 
 | Species | State |   G   |
 |:-------:|:-----:|:-----:|
 |   HNO3  |   l   | -80.7 |
 |   HNO3  |   g   | -73.5 |
 
-由此可得，第一步反应的吉布斯自由能为
+代入数据，计算第1步反应的吉布斯自由能变化值，单位eV：
 ```python
 from ase.units import kJ, J, mol
 
