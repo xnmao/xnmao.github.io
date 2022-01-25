@@ -5,22 +5,22 @@ layout: default
 ## 带电离子的自由能校正方法
 
 ### 引言
-电催化硝酸盐还原NO3RR（electrocatalytic nitrate reduction）的理论计算所考虑的吉布斯自由能，是相对于溶液中的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />离子能量。但是，DFT计算带电离子是相当不靠谱的。所以，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的自由能需要从气相<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的自由能推导。DFT可以计算电中性气相分子<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />。NO3RR相关文献可参考[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)、[Liu(2019)](<https://doi.org/10.1021/acscatal.9b02179>)、[Guo(2018)](<https://doi.org/10.1021/acscatal.7b01371>)、[Calle-Vallejo(2013)](<https://doi.org/10.1039/C2CP44620K>)。这篇博客的目的是复现[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)的Page S2中给出的计算方法。
+电催化硝酸盐还原NO3RR（electrocatalytic nitrate reduction）的理论计算所考虑的吉布斯自由能，是相对于溶液中的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />离子能量。但是，DFT计算带电离子是相当不靠谱的。所以，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />的自由能需要从气相<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的自由能推导。DFT可以计算电中性气相分子<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />。NO3RR相关文献可参考[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)、[Liu(2019)](<https://doi.org/10.1021/acscatal.9b02179>)、[Guo(2018)](<https://doi.org/10.1021/acscatal.7b01371>)、[Calle-Vallejo(2013)](<https://doi.org/10.1039/C2CP44620K>)。这篇文章的目的是复现[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)的Page S2中给出的计算方法。
 
 ### 计算方法
-根据[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)的Page S2中给出的描述，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />从如下两步反应得到：
+根据[Niu(2020)](<https://doi.org/10.1002/adfm.202008533>)在[Supporting Information](<https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1002%2Fadfm.202008533&file=adfm202008533-sup-0001-SuppMat.pdf>)的Page S2中给出的描述，设计如下两步反应得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />：
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{g})&space;\overset{1}{\rightarrow}&space;\mathrm{HNO}_{3}(\mathrm{l})&space;" title="\mathrm{HNO}_{3}(\mathrm{g}) \overset{1}{\rightarrow} \mathrm{HNO}_{3}(\mathrm{l}) " /></center>
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HNO}_{3}(\mathrm{l})&space;\overset{2}{\rightarrow}&space;\mathrm{H}^{&plus;}(\mathrm{aq})&plus;\mathrm{NO}_{3}^{-}(\mathrm{aq})" title="\mathrm{HNO}_{3}(\mathrm{l}) \overset{2}{\rightarrow} \mathrm{H}^{+}(\mathrm{aq})+\mathrm{NO}_{3}^{-}(\mathrm{aq})" /></center>
-接下来就只需要计算这两步反应的标准摩尔反应吉布斯自由能之和，就可以得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能变化值。
+接下来就只需要计算这两步反应的标准摩尔反应吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{r}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}" />之和，就可以得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能变化值。
 
-计算第1步反应的吉布斯自由能变化值，只需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册中STANDARD THERMODYNAMIC PROPERTIES OF CHEMICAL SUBSTANCES的5-29页，分别得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" />的标准摩尔生成吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />，单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />，摘录如下：
+计算第1步反应的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{r}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}" />，只需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册中STANDARD THERMODYNAMIC PROPERTIES OF CHEMICAL SUBSTANCES的5-29页，分别得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{g})" title="\inline \mathrm{HNO}_{3}(\mathrm{g})" />的标准摩尔生成吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />，单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />，摘录如下：
 
 | Species | State |   G   |
 |:-------:|:-----:|:-----:|
 |   HNO3  |   l   | -80.7 |
 |   HNO3  |   g   | -73.5 |
 
-单位换算
+单位换算：
 ```python
 # taken from the 2014 version of the CODATA suggestions
 mol = 6.022140857e23
@@ -29,7 +29,7 @@ kJ = 1000.0/e # eV
 J = kJ/1000
 K = 1.0
 ```
-代入数据，计算第1步反应的吉布斯自由能变化值，单位eV：
+代入数据，计算第1步反应的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{r}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}" />，单位eV：
 ```python
 G_HNO3_l = -80.7*kJ/mol
 G_HNO3_g = -73.5*kJ/mol
@@ -38,7 +38,7 @@ G_1 = G_HNO3_l - G_HNO3_g
 print(G_1) # -0.07462274093792332
 ```
 
-计算第2步反应的吉布斯自由能变化值，需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册中CODATA KEY VALUES FOR THERMODYNAMICS的5-1页和STANDARD THERMODYNAMIC PROPERTIES OF CHEMICAL SUBSTANCES的5-29页。标准摩尔吉布斯生成焓<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}" title="\inline \inline \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />）、标准摩尔熵<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\Delta&space;S_{\mathrm{m}}^{\ominus}" title="\inline \inline \Delta S_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\mathrm{J\!\cdot\!mol^{-1}\!\cdot\!K^{-1}}" title="\inline \inline \mathrm{J\!\cdot\!mol^{-1}\!\cdot\!K^{-1}}" />）、标准摩尔生成吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />），摘录如下：
+计算第2步反应的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{r}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}" />，需要参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>)手册中CODATA KEY VALUES FOR THERMODYNAMICS的5-1页和STANDARD THERMODYNAMIC PROPERTIES OF CHEMICAL SUBSTANCES的5-29页。标准摩尔吉布斯生成焓<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\Delta_{\mathrm{f}}&space;H_{\mathrm{m}}^{\ominus}" title="\inline \inline \Delta_{\mathrm{f}} H_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />）、标准摩尔熵<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\Delta&space;S_{\mathrm{m}}^{\ominus}" title="\inline \inline \Delta S_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\inline&space;\mathrm{J\!\cdot\!mol^{-1}\!\cdot\!K^{-1}}" title="\inline \inline \mathrm{J\!\cdot\!mol^{-1}\!\cdot\!K^{-1}}" />）、标准摩尔生成吉布斯自由能<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}" />（单位<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{kJ\!\cdot\!mol^{-1}}" title="\inline \mathrm{kJ\!\cdot\!mol^{-1}}" />），摘录如下：
 
 | Species | State |        H       |        S        |   G   | Page |
 |:-------:|:-----:|:--------------:|:---------------:|:-----:|:----:|
@@ -94,22 +94,22 @@ print(G_NO3_aq) # -1.3502092622062178
 
 完成这张表格：
 
-| Species | State |        H       |        S        |    G    |
-|:-------:|:-----:|:--------------:|:---------------:|:-------:|
-|    H+   |   aq  |        0       |        0        | 19.4811 |
-|    H2   |   g   |        0       | 130.680 ± 0.003 |    0    |
-|   NO3-  |   aq  | -206.85 ± 0.40 |  146.70 ± 0.40  | -130.28 |
-|    N2   |   g   |        0       | 191.609 ± 0.004 |    0    |
-|    O2   |   g   |        0       | 205.152 ± 0.005 |    0    |
-|   HNO3  |   l   |     -174.1     |      155.6      |  -80.7  |
+| Species | State |        H       |        S        |    G   |
+|:-------:|:-----:|:--------------:|:---------------:|:------:|
+|    H+   |   aq  |        0       |        0        |  19.5  |
+|    H2   |   g   |        0       | 130.680 ± 0.003 |        |
+|   NO3-  |   aq  | -206.85 ± 0.40 |  146.70 ± 0.40  | -130.3 |
+|    N2   |   g   |        0       | 191.609 ± 0.004 |        |
+|    O2   |   g   |        0       | 205.152 ± 0.005 |        |
+|   HNO3  |   l   |     -174.1     |      155.6      |  -80.7 |
 
-已经得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />、<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />，可计算第2步反应的吉布斯自由能变化值，单位eV：
+已经得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{&plus;})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{H}^{+})" />、<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{f}}&space;G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" title="\inline \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\mathrm{NO}_{3}^{-})" />和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}(\mathrm{l})" title="\inline \mathrm{HNO}_{3}(\mathrm{l})" />，可计算第2步反应的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{r}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}" />，单位eV：
 ```python
 G_2 = G_NO3_aq + G_H_aq - G_HNO3_l
 print(G_2) # -0.3119051178654192
 ```
 
-最终，对两步反应的标准摩尔反应吉布斯自由能求和，即可得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能差值：
+最终，对两步反应的<img src="https://latex.codecogs.com/svg.image?\inline&space;\Delta_{\mathrm{r}}&space;G_{\mathrm{m}}^{\ominus}" title="\inline \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}" />求和，即可得到<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NO}_{3}^{-}" title="\inline \mathrm{NO}_{3}^{-}" />相对于<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HNO}_{3}" title="\inline \mathrm{HNO}_{3}" />的吉布斯自由能差值，单位eV：
 ```python
 G_corr = G_1 + G_2
 print(G_corr) # -0.3865278588033425
