@@ -5,6 +5,7 @@ layout: default
 # Home
 
 ## Blog
+* [氧气的自由能校正方法](./blog/O2.md)
 * [带电离子的自由能校正方法](./blog/charged.md)
 * [Henry定律](./blog/Henry.md)
 * [电化学笔记](./blog/electrochemistry.md)
