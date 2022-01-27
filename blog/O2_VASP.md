@@ -2,11 +2,11 @@
 layout: default
 ---
 
-### 计算细节
+## 计算细节
 
-#### H2O
-##### 弛豫
-###### INCAR
+### H2O
+#### 弛豫
+##### INCAR
 ```shell
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
@@ -22,7 +22,7 @@ INCAR created by Atomic Simulation Environment
  LWAVE = .FALSE.
  LREAL = .FALSE.
 ```
-###### KPOINTS
+##### KPOINTS
 ```shell
 KPOINTS created by Atomic Simulation Environment
 0
@@ -30,7 +30,7 @@ Gamma
 1 1 1 
 0 0 0
 ```
-###### CONTCAR
+##### CONTCAR
 ```shell
  H  O                                   
    1.00000000000000     
@@ -48,7 +48,7 @@ Direct
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
 ```
-###### 基态电子能量
+##### 基态电子能量
 ```shell
 $ tail -1 vasp.out
  reached required accuracy - stopping structural energy minimisation
@@ -56,8 +56,8 @@ $ grep sigma OUTCAR | tail -1
   energy  without entropy=      -14.21977328  energy(sigma->0) =      -14.21977328
 ```
 
-##### 振动
-###### INCAR
+#### 振动
+##### INCAR
 ```shell
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
@@ -75,7 +75,7 @@ INCAR created by Atomic Simulation Environment
  LWAVE = .FALSE.
  LREAL = .FALSE.
 ```
-###### 振动频率
+##### 振动频率
 ```shell
 $ grep meV OUTCAR
    1 f  =  115.217449 THz   723.932586 2PiTHz 3843.240310 cm-1   476.501240 meV
@@ -89,9 +89,9 @@ $ grep meV OUTCAR
    9 f/i=    2.632461 THz    16.540241 2PiTHz   87.809449 cm-1    10.886988 meV
 ```
 
-#### H2
-##### 弛豫
-###### INCAR
+### H2
+#### 弛豫
+##### INCAR
 ```shell
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
@@ -107,7 +107,7 @@ INCAR created by Atomic Simulation Environment
  LWAVE = .FALSE.
  LREAL = .FALSE.
 ```
-###### KPOINTS
+##### KPOINTS
 ```shell
 KPOINTS created by Atomic Simulation Environment
 0
@@ -115,7 +115,7 @@ Gamma
 1 1 1 
 0 0 0
 ```
-###### CONTCAR
+##### CONTCAR
 ```shell
  H                                      
    1.00000000000000     
@@ -131,7 +131,7 @@ Direct
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
 ```
-###### 基态电子能量
+##### 基态电子能量
 ```shell
 $ tail -1 vasp.out
  reached required accuracy - stopping structural energy minimisation
@@ -139,8 +139,8 @@ $ grep sigma OUTCAR | tail -1
   energy  without entropy=       -6.77111859  energy(sigma->0) =       -6.77111859
 ```
 
-##### 振动
-###### INCAR
+#### 振动
+##### INCAR
 ```shell
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
@@ -158,7 +158,7 @@ INCAR created by Atomic Simulation Environment
  LWAVE = .FALSE.
  LREAL = .FALSE.
 ```
-###### 振动频率
+##### 振动频率
 ```shell
 $ grep meV OUTCAR
    1 f  =  129.946185 THz   816.475959 2PiTHz 4334.538025 cm-1   537.414415 meV
@@ -169,9 +169,9 @@ $ grep meV OUTCAR
    6 f/i=    0.031434 THz     0.197507 2PiTHz    1.048535 cm-1     0.130002 meV
 ```
 
-#### O2
-##### 弛豫
-###### INCAR
+### O2
+#### 弛豫
+##### INCAR
 ```shell
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
@@ -190,7 +190,7 @@ INCAR created by Atomic Simulation Environment
  LREAL = .FALSE.
  MAGMOM = 2*1.0000 
 ```
-###### KPOINTS
+##### KPOINTS
 ```shell
 KPOINTS created by Atomic Simulation Environment
 0
@@ -198,7 +198,7 @@ Gamma
 1 1 1 
 0 0 0
 ```
-###### CONTCAR
+##### CONTCAR
 ```shell
  O                                      
    1.00000000000000     
@@ -214,7 +214,7 @@ Direct
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
 ```
-###### 基态电子能量
+##### 基态电子能量
 ```shell
 $ tail -1 vasp.out
  reached required accuracy - stopping structural energy minimisation
@@ -222,8 +222,8 @@ $ grep sigma OUTCAR | tail -1
   energy  without entropy=       -9.85989701  energy(sigma->0) =       -9.85989701
 ```
 
-##### 振动
-###### INCAR
+#### 振动
+##### INCAR
 ```shell
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
@@ -244,7 +244,7 @@ INCAR created by Atomic Simulation Environment
  LREAL = .FALSE.
  MAGMOM = 2*1.0000 
 ```
-###### 振动频率
+##### 振动频率
 ```shell
 $ grep meV OUTCAR
    1 f  =   47.063643 THz   295.709591 2PiTHz 1569.874107 cm-1   194.639653 meV
