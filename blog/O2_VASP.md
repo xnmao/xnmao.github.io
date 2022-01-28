@@ -4,10 +4,9 @@ layout: default
 
 ### 计算细节
 
-#### H2O
-##### 弛豫
-###### INCAR
+#### H2O弛豫
 ```shell
+$ cat INCAR
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
  SIGMA = 0.050000
@@ -21,17 +20,16 @@ INCAR created by Atomic Simulation Environment
  LCHARG = .FALSE.
  LWAVE = .FALSE.
  LREAL = .FALSE.
-```
-###### KPOINTS
-```shell
+$ cat KPOINTS
 KPOINTS created by Atomic Simulation Environment
 0
 Gamma
 1 1 1 
 0 0 0
-```
-###### CONTCAR
-```shell
+$ grep TITEL POTCAR
+   TITEL  = PAW_PBE H 15Jun2001
+   TITEL  = PAW_PBE O 08Apr2002
+$ cat CONTCAR
  H  O                                   
    1.00000000000000     
     15.0000000000000000    0.0000000000000000    0.0000000000000000
@@ -47,18 +45,15 @@ Direct
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
-```
-###### 基态电子能量
-```shell
 $ tail -1 vasp.out
  reached required accuracy - stopping structural energy minimisation
 $ grep sigma OUTCAR | tail -1
   energy  without entropy=      -14.21977328  energy(sigma->0) =      -14.21977328
 ```
 
-##### 振动
-###### INCAR
+#### H2O振动
 ```shell
+$ cat INCAR
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
  POTIM = 0.015000
@@ -74,9 +69,6 @@ INCAR created by Atomic Simulation Environment
  LCHARG = .FALSE.
  LWAVE = .FALSE.
  LREAL = .FALSE.
-```
-###### 振动频率
-```shell
 $ grep meV OUTCAR
    1 f  =  115.217449 THz   723.932586 2PiTHz 3843.240310 cm-1   476.501240 meV
    2 f  =  111.923744 THz   703.237623 2PiTHz 3733.374124 cm-1   462.879564 meV
@@ -89,10 +81,9 @@ $ grep meV OUTCAR
    9 f/i=    2.632461 THz    16.540241 2PiTHz   87.809449 cm-1    10.886988 meV
 ```
 
-#### H2
-##### 弛豫
-###### INCAR
+#### H2弛豫
 ```shell
+$ cat INCAR
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
  SIGMA = 0.050000
@@ -106,17 +97,15 @@ INCAR created by Atomic Simulation Environment
  LCHARG = .FALSE.
  LWAVE = .FALSE.
  LREAL = .FALSE.
-```
-###### KPOINTS
-```shell
+$ cat KPOINTS
 KPOINTS created by Atomic Simulation Environment
 0
 Gamma
 1 1 1 
 0 0 0
-```
-###### CONTCAR
-```shell
+$ grep TITEL POTCAR
+   TITEL  = PAW_PBE H 15Jun2001
+$ cat CONTCAR
  H                                      
    1.00000000000000     
     15.0000000000000000    0.0000000000000000    0.0000000000000000
@@ -130,18 +119,15 @@ Direct
  
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
-```
-###### 基态电子能量
-```shell
 $ tail -1 vasp.out
  reached required accuracy - stopping structural energy minimisation
 $ grep sigma OUTCAR | tail -1
   energy  without entropy=       -6.77111859  energy(sigma->0) =       -6.77111859
 ```
 
-##### 振动
-###### INCAR
+#### H2振动
 ```shell
+$ cat INCAR
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
  POTIM = 0.015000
@@ -157,9 +143,6 @@ INCAR created by Atomic Simulation Environment
  LCHARG = .FALSE.
  LWAVE = .FALSE.
  LREAL = .FALSE.
-```
-###### 振动频率
-```shell
 $ grep meV OUTCAR
    1 f  =  129.946185 THz   816.475959 2PiTHz 4334.538025 cm-1   537.414415 meV
    2 f  =    1.532109 THz     9.626522 2PiTHz   51.105639 cm-1     6.336294 meV
@@ -169,10 +152,9 @@ $ grep meV OUTCAR
    6 f/i=    0.031434 THz     0.197507 2PiTHz    1.048535 cm-1     0.130002 meV
 ```
 
-#### O2
-##### 弛豫
-###### INCAR
+#### O2弛豫
 ```shell
+$ cat INCAR
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
  SIGMA = 0.050000
@@ -189,17 +171,15 @@ INCAR created by Atomic Simulation Environment
  LWAVE = .FALSE.
  LREAL = .FALSE.
  MAGMOM = 2*1.0000 
-```
-###### KPOINTS
-```shell
+$ cat KPOINTS
 KPOINTS created by Atomic Simulation Environment
 0
 Gamma
 1 1 1 
 0 0 0
-```
-###### CONTCAR
-```shell
+$ grep TITEL POTCAR
+   TITEL  = PAW_PBE O 08Apr2002
+$ cat CONTCAR
  O                                      
    1.00000000000000     
     15.0000000000000000    0.0000000000000000    0.0000000000000000
@@ -213,18 +193,15 @@ Direct
  
   0.00000000E+00  0.00000000E+00  0.00000000E+00
   0.00000000E+00  0.00000000E+00  0.00000000E+00
-```
-###### 基态电子能量
-```shell
 $ tail -1 vasp.out
  reached required accuracy - stopping structural energy minimisation
 $ grep sigma OUTCAR | tail -1
   energy  without entropy=       -9.85989701  energy(sigma->0) =       -9.85989701
 ```
 
-##### 振动
-###### INCAR
+#### O2振动
 ```shell
+$ cat INCAR
 INCAR created by Atomic Simulation Environment
  ENCUT = 520.000000
  POTIM = 0.015000
@@ -243,9 +220,6 @@ INCAR created by Atomic Simulation Environment
  LWAVE = .FALSE.
  LREAL = .FALSE.
  MAGMOM = 2*1.0000 
-```
-###### 振动频率
-```shell
 $ grep meV OUTCAR
    1 f  =   47.063643 THz   295.709591 2PiTHz 1569.874107 cm-1   194.639653 meV
    2 f  =    0.692483 THz     4.350999 2PiTHz   23.098745 cm-1     2.863880 meV
