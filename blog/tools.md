@@ -11,7 +11,7 @@ layout: default
 4. Catalysis Microkinetic Analysis Package. [CatMAP](<https://catmap.readthedocs.io/en/latest/index.html>)
 
 ### 安装示例
-1. [Intel® oneAPI HPC Toolkit & Intel® oneAPI Math Kernel Library](./installation/oneapi.md)
+1. [Intel® oneAPI Math Kernel Library & Intel® oneAPI HPC Toolkit](./installation/oneapi.md)
 2. VASP
 
 [[Back]](../)
