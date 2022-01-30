@@ -14,7 +14,7 @@ $ tar -xf vasp.5.4.4.tar.gz
 $ cd vasp.5.4.4/
 $ cp arch/makefile.include.linux_intel makefile.include
 ```
-3. 编辑`makefile.include`文件，添加`-Dsol_compat`参数（VASP.5.4.4）和`-xHOST`参数（计算提速）
+3. 编辑`makefile.include`文件，添加`-Dsol_compat`参数和`-xHOST`参数，分别用于VASPsol(VASP.5.4.4)和计算提速
 ```shell
 $ git diff arch/makefile.include.linux_intel makefile.include
 diff --git a/arch/makefile.include.linux_intel b/makefile.include
