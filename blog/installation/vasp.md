@@ -14,32 +14,9 @@ $ tar -xf vasp.5.4.4.tar.gz
 $ cd vasp.5.4.4/
 $ cp arch/makefile.include.linux_intel makefile.include
 ```
-3. 编辑`makefile.include`文件，添加`-Dsol_compat`参数和`-xHOST`参数，分别用于VASPsol(VASP.5.4.4)和计算提速
+3. 编辑`makefile.include`文件，`CPP_OPTIONS`中追加`-Dsol_compat`参数（用于对应VASP5.4.4版本的VASPsol）和`-xHOST`参数（计算提速）
 ```shell
-$ git diff arch/makefile.include.linux_intel makefile.include
-diff --git a/arch/makefile.include.linux_intel b/makefile.include
-index 10e425d..b769153 100644
---- a/arch/makefile.include.linux_intel
-+++ b/makefile.include
-@@ -7,7 +7,8 @@ CPP_OPTIONS= -DHOST=\"LinuxIFC\"\
-              -Davoidalloc \
-              -Duse_bse_te \
-              -Dtbdyn \
--             -Duse_shmem
-+             -Duse_shmem \
-+             -Dsol_compat
-
- CPP        = fpp -f_com=no -free -w0  $*$(FUFFIX) $*$(SUFFIX) $(CPP_OPTIONS)
-
-@@ -16,7 +17,7 @@ FCL        = mpiifort -mkl=sequential -lstdc++
-
- FREE       = -free -names lowercase
-
--FFLAGS     = -assume byterecl -w
-+FFLAGS     = -assume byterecl -w -xHOST
- OFLAG      = -O2
- OFLAG_IN   = $(OFLAG)
- DEBUG      = -O0
+FFLAGS     = -assume byterecl -w -xHOST
 ```
 4. 添加VASPsol文件
 ```shell
