@@ -12,6 +12,6 @@ layout: default
 
 ### 安装示例
 1. [Intel® oneAPI Math Kernel Library & Intel® oneAPI HPC Toolkit](./installation/oneapi.md)
-2. VASP
+2. [The Vienna Ab initio Simulation Package](./installation/vasp.md)
 
 [[Back]](../)
