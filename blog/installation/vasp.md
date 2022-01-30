@@ -14,7 +14,7 @@ $ tar -xf vasp.5.4.4.tar.gz
 $ cd vasp.5.4.4/
 $ cp arch/makefile.include.linux_intel makefile.include
 ```
-3. 编辑`makefile.include`文件，`CPP_OPTIONS`中追加`-Dsol_compat`参数（用于对应VASP5.4.4版本的VASPsol）和`-xHOST`参数（计算提速）
+3. 编辑`makefile.include`文件，`CPP_OPTIONS`中追加`-Dsol_compat`参数（用于对应VASP5.4.4版本的VASPsol），`FFLAGS`中追加`-xHOST`参数（计算提速）
 ```shell
 FFLAGS     = -assume byterecl -w -xHOST
 ```
