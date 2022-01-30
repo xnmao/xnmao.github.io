@@ -28,6 +28,6 @@ bash l_onemkl_p_2022.0.2.136_offline.sh
 ```
 
 #### 参考链接
-[Linux下安装Intel oneAPI](<https://mp.weixin.qq.com/s/7pQETkrDO1C83vQjKQqI4w>)
+* [Linux下安装Intel oneAPI](<https://mp.weixin.qq.com/s/7pQETkrDO1C83vQjKQqI4w>)
 
 [[Back]](../tools.md)
