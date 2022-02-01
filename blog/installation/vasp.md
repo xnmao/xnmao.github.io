@@ -23,6 +23,7 @@ FFLAGS     = -assume byterecl -w -xHOST
 $ cd ../
 $ git clone git@github.com:henniggroup/VASPsol.git
 $ cp VASPsol/src/solvation.F vasp.5.4.4/src/
+$ patch vasp.5.4.4/src/pot.F VASPsol/src/patches/pbz_patch_541
 ```
 5. 编译VASP
 ```shell
