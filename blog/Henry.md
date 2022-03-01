@@ -16,7 +16,7 @@ layout: default
 6. 也可以根据Table 1的转换因子，对Hcp数值直接乘1.83089得到Hxp数值。
 
 ### 结果表述
-假设稀溶液的质量密度与298.15 K时的纯水相同，当液面上方大气中氧的分压为101325 Pa时，氧气在水中的摩尔分数（物质的量浓度）为<img src="https://latex.codecogs.com/svg.image?\inline&space;2.38\!\times\!10^{-5}\&space;\mathrm{mol}\!\cdot\!{\mathrm{L}}^{-1}" title="\inline 2.38\!\times\!10^{-5}\ \mathrm{mol}\!\cdot\!{\mathrm{L}}^{-1}" />。
+假设稀溶液的质量密度与298.15 K时的纯水相同，当液面上方大气中氧的分压为101325 Pa时，氧气在水中的摩尔分数为<img src="https://latex.codecogs.com/svg.image?\inline&space;2.38\!\times\!10^{-5}" title="\inline 2.38\!\times\!10^{-5}" />。
 
 ### 参考
 1. Sander, R.: Compilation of Henry's law constants (version 4.0) for water as solvent, Atmos. Chem. Phys., 15, 4399–4981, [https://doi.org/10.5194/acp-15-4399-2015](<https://acp.copernicus.org/articles/15/4399/2015/>), 2015.
