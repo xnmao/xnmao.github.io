@@ -22,14 +22,14 @@ import matplotlib.pyplot as plt
 
 class Distribution_Fraction:
 
-    def __init__(self, pKa=[], pH=np.linspace(0, 14, 301)):
-        self.pKa = pKa # pKa1, pKa2, pKa3, ...
+    def __init__(self, pKa=[13.995,], pH=np.linspace(0, 14, 301)):
+        self.pKa = pKa # pKa1, pKa2, pKa3, pKa4, ...
         self.pH = pH # pH
-        n = len(self.pKa)
+        n = len(pKa)
 
         # 计算分布分数
-        H = 10.**(-np.array(self.pH))
-        Ka = 10.**(-np.array(self.pKa))
+        H = 10.**(-np.array(pH))
+        Ka = 10.**(-np.array(pKa))
         c = np.repeat(Ka.reshape(n, 1), len(pH), axis=1)
         self.delta = [np.prod(c, axis=0),]
         for i in range(-1, -n-1, -1):
@@ -40,7 +40,7 @@ class Distribution_Fraction:
         # 获得化学式
         self.formula = ['A',]
         for i in range(1, n+1):
-            self.formula.append(f'H{i:d}A'.replace('H1', 'H'))
+            self.formula.append(f'H{i:d}A'.replace('H1A', 'HA'))
 
     def plot(self, ax): # 绘图
         for formula, delta in zip(self.formula, self.delta):
