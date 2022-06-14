@@ -2,10 +2,10 @@
 layout: default
 ---
 
-## 计算酸溶液的分布分数
+## 酸碱组分的平衡浓度与分布分数
 
 ### 概念
-溶液中某酸碱组分的平衡浓度占其总浓度的分数，称为分布分数（distribution fraction），以$ delta $表示。
+溶液中某酸碱组分的平衡浓度占其总浓度的分数，称为分布分数（distribution fraction），以<img src="https://latex.codecogs.com/svg.image?\inline&space;\delta" title="https://latex.codecogs.com/svg.image?\inline \delta" />表示。
 
 ### 应用
 可确定阴阳离子浓度，然后估算弱酸溶液的双电层厚度。
@@ -75,7 +75,7 @@ if __name__ == '__main__':
 
 
 ### 计算结果
-<center><img src="../graphic/distribution_fraction/H2CO3.svg" title="current density" width="95%"/></center>
+<center><img src="../graphic/distribution_fraction/H2CO3.svg" title="H2CO3" width="95%"/></center>
 
 ### 参考
 1. Sander, R.: Compilation of Henry's law constants (version 4.0) for water as solvent, Atmos. Chem. Phys., 15, 4399–4981, [https://doi.org/10.5194/acp-15-4399-2015](<https://acp.copernicus.org/articles/15/4399/2015/>), 2015.
