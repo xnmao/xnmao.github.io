@@ -4,17 +4,17 @@ layout: default
 
 ## 酸碱组分的平衡浓度与分布分数
 
-### 概念
 溶液中某酸碱组分的平衡浓度占其总浓度的分数，称为分布分数（distribution fraction），以<img src="https://latex.codecogs.com/svg.image?\inline&space;\delta" title="https://latex.codecogs.com/svg.image?\inline \delta" />表示。
 
 ### 应用
-可确定阴阳离子浓度，然后估算弱酸溶液的双电层厚度。
+1. 确定离子浓度，然后估算弱电解质溶液的双电层厚度。
+2. 确定物种的主要状态，然后使用对应的状态计算自由能。
 
 ### 已知条件
-pKa来自CRC
-求解过程参考分析化学P116-118
+<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>) Page 5-87。
 
 ### Python求解过程
+参考《分析化学武汉大学第五版》5.2节（P116-118）。
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -62,20 +62,14 @@ if __name__ == '__main__':
     plt.savefig('H2CO3.svg', bbox_inches='tight')
 ```
 
-
 ### 计算结果
-碳酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{3}^{2-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{CO}_{3}^{2-}" />
+碳酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{3}^{2-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{CO}_{3}^{2-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87
 <center><img src="../graphic/distribution_fraction/H2CO3.svg" title="H2CO3" width="95%"/></center>
-醋酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{Ac}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{Ac}^{-}" />
+醋酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{Ac}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{Ac}^{-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-92
 <center><img src="../graphic/distribution_fraction/HAc.svg" title="HAc" width="95%"/></center>
-甲酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{HCOO}^{-}" />
+甲酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{HCOO}^{-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-88
 <center><img src="../graphic/distribution_fraction/HCOOH.svg" title="HCOOH" width="95%"/></center>
-氨水。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NH}_{3}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{NH}_{3}" />
+氨水。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NH}_{3}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{NH}_{3}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87
 <center><img src="../graphic/distribution_fraction/NH3.svg" title="NH3" width="95%"/></center>
-
-### 参考
-1. Sander, R.: Compilation of Henry's law constants (version 4.0) for water as solvent, Atmos. Chem. Phys., 15, 4399–4981, [https://doi.org/10.5194/acp-15-4399-2015](<https://acp.copernicus.org/articles/15/4399/2015/>), 2015.
-2. [亨利定律常数表](<https://max.book118.com/html/2017/0528/109971917.shtm>)
-3. [Atkins' Physical Chemistry 11e](<https://global.oup.com/academic/product/atkins-physical-chemistry-11e-9780198817895?q=atkins&lang=en&cc=us>) P152-153
 
 [[Back]](../)
