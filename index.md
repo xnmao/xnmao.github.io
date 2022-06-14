@@ -5,6 +5,7 @@ layout: default
 # Home
 
 ## Blog
+* [计算酸溶液的分布分数](./blog/distribution_fraction.html)
 * [氧气的自由能校正方法](./blog/O2.md)
 * [带电离子的自由能校正方法](./blog/charged.md)
 * [用亨利定律估计氧气在水中的溶解度](./blog/Henry.md)
@@ -13,7 +14,6 @@ layout: default
 * [计算工具与安装示例](./blog/tools.md)
 * [Nature电子版](./blog/nature.html)
 * [使用Python求解点到直线的距离](./blog/distance.html)
-* [计算酸溶液的分布分数](./blog/distribution_fraction.html)
 
 ## Publications
 
