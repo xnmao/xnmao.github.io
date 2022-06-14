@@ -64,7 +64,14 @@ if __name__ == '__main__':
 
 
 ### 计算结果
+碳酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{3}^{2-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{CO}_{3}^{2-}" />
 <center><img src="../graphic/distribution_fraction/H2CO3.svg" title="H2CO3" width="95%"/></center>
+醋酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{Ac}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{Ac}^{-}" />
+<center><img src="../graphic/distribution_fraction/HAc.svg" title="HAc" width="95%"/></center>
+甲酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{HCOO}^{-}" />
+<center><img src="../graphic/distribution_fraction/HCOOH.svg" title="HCOOH" width="95%"/></center>
+氨水。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NH}_{3}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{NH}_{3}" />
+<center><img src="../graphic/distribution_fraction/NH3.svg" title="NH3" width="95%"/></center>
 
 ### 参考
 1. Sander, R.: Compilation of Henry's law constants (version 4.0) for water as solvent, Atmos. Chem. Phys., 15, 4399–4981, [https://doi.org/10.5194/acp-15-4399-2015](<https://acp.copernicus.org/articles/15/4399/2015/>), 2015.
