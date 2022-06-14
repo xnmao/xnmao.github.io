@@ -55,22 +55,22 @@ def get_label(n_H, charge): # 获得标签
 
 if __name__ == '__main__':
 
-	pH = np.linspace(0, 14, 301) # pH值
-	pK_a = [6.35, 10.33] # pKa1, pKa2, pKa3, ...
+    pH = np.linspace(0, 14, 301) # pH值
+    pK_a = [6.35, 10.33] # pKa1, pKa2, pKa3, ...
 
-	delta = get_delta(pK_a=pK_a, pH=pH) # 分布分数
-	n = len(pK_a)
+    delta = get_delta(pK_a=pK_a, pH=pH) # 分布分数
+    n = len(pK_a)
 
-	plt.figure(facecolor='w')
-	ax = plt.gca()
-	for i in range(n+1):
-		ax.plot(pH, delta[i], label=get_label(i, -n+i))
-	ax.set_xlabel('$\mathregular{pH}$', fontsize='x-large')
-	ax.set_ylabel('$\delta$', fontsize='x-large')
-	ax.tick_params(labelsize='x-large')
-	ax.axis((0, 14, 0, 1))
-	ax.legend(fontsize='x-large')
-	plt.savefig('H2CO3.svg', bbox_inches='tight')
+    plt.figure(facecolor='w')
+    ax = plt.gca()
+    for i in range(n+1):
+        ax.plot(pH, delta[i], label=get_label(i, -n+i))
+    ax.set_xlabel('$\mathregular{pH}$', fontsize='x-large')
+    ax.set_ylabel('$\delta$', fontsize='x-large')
+    ax.tick_params(labelsize='x-large')
+    ax.axis((0, 14, 0, 1))
+    ax.legend(fontsize='x-large')
+    plt.savefig('H2CO3.svg', bbox_inches='tight')
 ```
 
 
