@@ -14,7 +14,7 @@ layout: default
 <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />参考[CRC Handbook of Chemistry and Physics](<https://hbcp.chemnetbase.com/faces/contents/ContentsSearch.xhtml>) Page 5-87。
 
 ### Python求解过程
-参考《分析化学武汉大学第五版》5.2节（P116-118）。
+参考《分析化学》武汉大学（第五版）上册第5.2节（P116-118）。
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -63,13 +63,13 @@ if __name__ == '__main__':
 ```
 
 ### 计算结果
-碳酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{3}^{2-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{CO}_{3}^{2-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87
+碳酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{3}^{2-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{CO}_{3}^{2-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87。
 <center><img src="../graphic/distribution_fraction/H2CO3.svg" title="H2CO3" width="95%"/></center>
-醋酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{Ac}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{Ac}^{-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-92
+醋酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{Ac}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{Ac}^{-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-88。
 <center><img src="../graphic/distribution_fraction/HAc.svg" title="HAc" width="95%"/></center>
-甲酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{HCOO}^{-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-88
+甲酸溶液。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{HCOO}^{-}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-92。
 <center><img src="../graphic/distribution_fraction/HCOOH.svg" title="HCOOH" width="95%"/></center>
-氨水。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NH}_{3}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{NH}_{3}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87
+氨水。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NH}_{3}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{NH}_{3}" />。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87。
 <center><img src="../graphic/distribution_fraction/NH3.svg" title="NH3" width="95%"/></center>
 
 [[Back]](../)
