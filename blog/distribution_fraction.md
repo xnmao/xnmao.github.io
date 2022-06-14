@@ -20,56 +20,45 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def get_delta(pK_a, pH): # 计算分布分数
-    c_H = 10.**(-np.array(pH))
-    K_a = 10.**(-np.array(pK_a))
-    npts = pH.shape[0]
-    n = len(pK_a)
-    K_a = np.repeat(K_a.reshape(n, 1), npts, axis=1)
-    delta = [np.prod(K_a, axis=0),]
-    for i in range(-1, -n-1, -1):
-        K_a[i] = c_H
-        delta.append(np.prod(K_a, axis=0))
-    delta /= np.sum(delta, axis=0)
-    return delta
+class Distribution_Fraction:
 
+    def __init__(self, pKa=[], pH=np.linspace(0, 14, 301)):
+        self.pKa = pKa # pKa1, pKa2, pKa3, ...
+        self.pH = pH # pH
+        n = len(self.pKa)
 
-def get_label(n_H, charge): # 获得标签
-    if n_H == 0: # 化学式中的氢个数
-        H = ''
-    elif n_H == 1:
-        H = '\mathrm{H}'
-    else:
-        H = r'\mathrm{H}_{ %d}' % i
-    if charge == 0: # 带电荷数
-        q = ''
-    else:
-        q = f'{charge:+d}'
-        if abs(charge) == 1:
-            q = q[:1]
-        else:
-            q = f'{q[1:]}\!{q[0]}'
-    label = r'$%s\mathrm{A}^{ %s}$'  % (H, q)
-    return label
+        # 计算分布分数
+        H = 10.**(-np.array(self.pH))
+        Ka = 10.**(-np.array(self.pKa))
+        c = np.repeat(Ka.reshape(n, 1), len(pH), axis=1)
+        self.delta = [np.prod(c, axis=0),]
+        for i in range(-1, -n-1, -1):
+            c[i] = H
+            self.delta.append(np.prod(c, axis=0))
+        self.delta /= np.sum(self.delta, axis=0)
+
+        # 获得化学式
+        self.formula = ['A',]
+        for i in range(1, n+1):
+            self.formula.append(f'H{i:d}A'.replace('H1', 'H'))
+
+    def plot(self, ax): # 绘图
+        for formula, delta in zip(self.formula, self.delta):
+            ax.plot(self.pH, delta, label=formula)
+        ax.legend(fontsize='large')
+        ax.axis((0, 14, 0, 1))
+        ax.tick_params(labelsize='x-large')
+        ax.set_xlabel(r'$\mathregular{pH}$', fontsize='x-large')
+        ax.set_ylabel(r'$\delta$', fontsize='x-large')
+        return ax
 
 
 if __name__ == '__main__':
 
-    pH = np.linspace(0, 14, 301) # pH值
-    pK_a = [6.35, 10.33] # pKa1, pKa2, pKa3, ...
-
-    delta = get_delta(pK_a=pK_a, pH=pH) # 分布分数
-    n = len(pK_a)
-
+    distribution = Distribution_Fraction(pKa=[6.35, 10.33]) # CRC Page 5-87
     plt.figure(facecolor='w')
     ax = plt.gca()
-    for i in range(n+1):
-        ax.plot(pH, delta[i], label=get_label(i, -n+i))
-    ax.set_xlabel('$\mathregular{pH}$', fontsize='x-large')
-    ax.set_ylabel('$\delta$', fontsize='x-large')
-    ax.tick_params(labelsize='x-large')
-    ax.axis((0, 14, 0, 1))
-    ax.legend(fontsize='x-large')
+    distribution.plot(ax=ax)
     plt.savefig('H2CO3.svg', bbox_inches='tight')
 ```
 
