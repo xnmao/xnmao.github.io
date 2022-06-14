@@ -40,7 +40,7 @@ def get_label(n_H, charge): # 获得标签
     elif n_H == 1:
         H = '\mathrm{H}'
     else:
-        H = r'\mathrm{H}_{%d}' % i
+        H = r'\mathrm{H}_{ %d}' % i
     if charge == 0: # 带电荷数
         q = ''
     else:
@@ -49,7 +49,7 @@ def get_label(n_H, charge): # 获得标签
             q = q[:1]
         else:
             q = f'{q[1:]}\!{q[0]}'
-    label = r'$%s\mathrm{A}^{%s}$'  % (H, q)
+    label = r'$%s\mathrm{A}^{ %s}$'  % (H, q)
     return label
 
 
