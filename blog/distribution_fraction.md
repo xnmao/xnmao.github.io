@@ -15,7 +15,7 @@ pKa来自CRC
 求解过程参考分析化学P116-118
 
 ### Python求解过程
-```Python3
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 
