@@ -72,4 +72,44 @@ if __name__ == '__main__':
 氨水。<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{a}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{p}K_{a}" />见CRC Page 5-87。图例中的A是<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{NH}_{3}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{NH}_{3}" />。
 <center><img src="../graphic/distribution_fraction/NH3.svg" title="NH3" width="95%"/></center>
 
+
+### 绘制浓度对数图
+在磷酸钾溶液中，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{K^{&plus;}}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{K^{+}}" />离子的浓度是0.5 mol/L。求溶液中各组分的浓度与pH的关系。
+
+#### Python求解过程及其计算结果
+```python
+pH = np.linspace(1, 13, 121) # 设定: pH范围
+pKa = [2.16, 7.21, 12.32] # 设定: CRC Page 5-87
+M = 0.5 # 设定: 钾阳离子浓度，单位mol/L
+qM = 1 # 设定: 钾阳离子带正电荷是+1
+qA = -3 # 设定: 完全解离的磷酸根阴离子所带电荷是-3
+
+npts = len(pH)
+q = np.arange(len(pKa)+1) + qA # 完全/未完全解离的各物种所带电荷
+H = 10.**(-np.array(pH)) # 计算氢离子浓度
+OH = 10.**(-np.array(14-pH)) # 计算氢氧根离子浓度
+M = np.repeat(M, npts) # 钾阳离子浓度
+distribution = Distribution_Fraction(pKa=pKa, pH=pH)
+c = -(H-OH+qM*M)/(distribution.delta*q.reshape(-1, 1)).sum(axis=0) # 电荷平衡
+concentrations = np.insert(c*distribution.delta, 0, [H, OH, M], axis=0).T # H, OH, M, A, HA, H2A, H3A, ...
+
+plt.figure(facecolor='w')
+ax = plt.gca()
+ax.plot(pH, concentrations.T[0], label='H')
+ax.plot(pH, concentrations.T[1], label='OH')
+ax.plot(pH, concentrations.T[2], label='M')
+for i, formula in enumerate(distribution.formula):
+	ax.plot(pH, concentrations.T[3+i], label=formula)
+ax.legend(fontsize='large')
+ax.set_xlim(pH[[0, -1]])
+ax.set_xticks(np.arange(pH[0], pH[-1]+0.1, 2))
+ax.set_yscale('log')
+ax.tick_params(labelsize='x-large')
+ax.set_xlabel(r'$\mathregular{pH}$', fontsize='x-large')
+ax.set_ylabel(r'$c\ [\mathrm{mol}\!\cdot\!\mathrm{L}^{-1}]$', fontsize='x-large')
+plt.savefig('concentrations.svg', bbox_inches='tight')
+```
+
+<center><img src="../graphic/distribution_fraction/concentrations.svg" title="concentrations" width="95%"/></center>
+
 [[Back]](../)
