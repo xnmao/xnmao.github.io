@@ -73,10 +73,10 @@ if __name__ == '__main__':
 <center><img src="../graphic/distribution_fraction/NH3.svg" title="NH3" width="95%"/></center>
 
 
-### 绘制浓度对数图
+### 磷酸钾溶液的电化学性质
+#### 绘制浓度对数图
 在磷酸钾溶液中，<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{K^{&plus;}}" title="https://latex.codecogs.com/svg.image?\inline \mathrm{K^{+}}" />离子的浓度是0.5 mol/L。求溶液中各组分的浓度与pH的关系。
 
-#### Python求解过程及其计算结果
 ```python
 pH = np.linspace(1, 13, 121) # 设定: pH范围
 pKa = [2.16, 7.21, 12.32] # 设定: CRC Page 5-87
@@ -111,5 +111,40 @@ plt.savefig('concentrations.svg', bbox_inches='tight')
 ```
 
 <center><img src="../graphic/distribution_fraction/concentrations.svg" title="concentrations" width="95%"/></center>
+
+#### 计算德拜长度
+
+双电层（electrical double layer），电极和电解质溶液界面的最原始模型。其中假设在电极的表面上有一层正电荷，而在紧挨着它的溶液中则有一层负电荷（或者相反）。
+德拜长度即双电层厚度，由温度、离子所带电荷及其对应浓度、溶剂的介电常数共同决定：
+<img src="https://latex.codecogs.com/svg.image?\inline&space;r_{\mathrm{D}}&space;=&space;\left(\frac{\varepsilon&space;RT}{2\rho&space;F^{2}Ib^{\ominus}}\right)^{1/2}" title="https://latex.codecogs.com/svg.image?\inline r_{\mathrm{D}} = \left(\frac{\varepsilon RT}{2\rho F^{2}Ib^{\ominus}}\right)^{1/2}" />
+
+```python
+from ase.units import _eps0, kB, J, C, mol, m
+
+temperature = 298.15
+eb_k = 249.21 - 0.79069*temperature + 0.00072997*temperature**2 # CRC P6-220
+
+def get_lambda_d_k(charge_numbers=(1, -1), concentrations=(1, 1), temperature=298.15):
+    lambda_d_k = ((_eps0*eb_k*kB/J*temperature)/(np.divide(charge_numbers, C)**2*np.multiply(concentrations, mol*1e+03)).sum(axis=-1))**0.5*m
+    return lambda_d_k
+
+charge_numbers = np.insert(q, 0, (1, -1, qM)).reshape(1, -1).repeat(npts, axis=0)
+lambda_d_k = get_lambda_d_k(charge_numbers, concentrations)
+
+plt.figure(facecolor='w')
+ax = plt.gca()
+ax.plot(pH, lambda_d_k)
+ax.set_xlim(pH[[0, -1]])
+ax.set_xticks(np.arange(pH[0], pH[-1]+0.1, 2))
+ax.tick_params(labelsize='x-large')
+ax.set_xlabel(r'$\mathregular{pH}$', fontsize='x-large')
+ax.set_ylabel(r'$r_{\mathregular{D}}\ [\mathrm{\AA}]$', fontsize='x-large')
+plt.savefig('lambda_d_k.svg', bbox_inches='tight')
+```
+
+<center><img src="../graphic/distribution_fraction/lambda_d_k.svg" title="lambda_d_k" width="95%"/></center>
+
+#### 计算显式电场强度
+
 
 [[Back]](../)
