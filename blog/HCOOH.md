@@ -5,9 +5,9 @@ layout: default
 ## pH对CO2RR热力学的影响
 
 酸性条件下，电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}\mathrm{RR}" title="\inline \mathrm{CO}_{2}\mathrm{RR}" />可生成HCOOH，但中性/碱性条件下，HCOOH会解离。
-本文分析了HCOOH的解离如何影响电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}\mathrm{RR}" title="\inline \mathrm{CO}_{2}\mathrm{RR}" />的反应自由能变化。
+本文旨在分析HCOOH的解离如何影响电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}\mathrm{RR}" title="\inline \mathrm{CO}_{2}\mathrm{RR}" />的反应自由能变化。
 
-感谢Michael博士。
+感谢Michael博士！
 
 酸性条件下电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}" title="\inline \mathrm{CO}_{2}" />还原为HCOOH，氢源是质子，甲酸盐的主要存在形式是HCOOH
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{CO}_{2}&space;&plus;&space;2\mathrm{H}^{&plus;}&space;&plus;&space;2e^{-}&space;\rightleftharpoons&space;\mathrm{HCOOH}" title="\mathrm{CO}_{2} + 2\mathrm{H}^{+} + 2e^{-} \rightleftharpoons \mathrm{HCOOH}" /></center>
@@ -17,16 +17,15 @@ layout: default
 
 因此，这两种条件下电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}\mathrm{RR}" title="\inline \mathrm{CO}_{2}\mathrm{RR}" />自由能的差别主要来自于HCOOH和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />的能量差。
 
-计算HCOOH和<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />的能量差，即考虑HCOOH的解离
+HCOOH可直接解离生成<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HCOOH}&space;\rightleftharpoons&space;\mathrm{HCOO}^{-}&space;&plus;&space;\mathrm{H}^{&plus;}" title="\mathrm{HCOOH} \rightleftharpoons \mathrm{HCOO}^{-} + \mathrm{H}^{+}" /></center>
 
+上式的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{\mathrm{a}}" title="\inline \mathrm{p}K_{\mathrm{a}}" />等于3.75。
 
-
-<center><img src="https://latex.codecogs.com/svg.image?\mathrm{HCOOH}&space;\rightleftharpoons&space;\mathrm{HCOO}^{-}&space;&plus;&space;\mathrm{H}^{&plus;}" title="\mathrm{HCOOH} \rightleftharpoons \mathrm{HCOO}^{-} + \mathrm{H}^{+}" /></center>
-上式的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{\mathrm{a}}" title="\inline \mathrm{p}K_{\mathrm{a}}" />为3.75
-然后根据
+然后根据反应平衡常数和反应自由能的关系式
 <center><img src="https://latex.codecogs.com/svg.image?K&space;=&space;\exp\left(-\frac{\Delta&space;G}{k_{\mathrm{B}}T}\right)" title="K = \exp\left(-\frac{\Delta G}{k_{\mathrm{B}}T}\right)" /></center>
-可以得出该反应的自由能变化值为-0.222 eV
+可得，反应自由能为-0.222 eV。
+
 ```python
 import numpy as np
 from ase.units import kB
@@ -37,8 +36,8 @@ pKa = 3.75 # HCOOH, CRC Page 5-92
 dG = -kB*T*pKa*np.log(10)
 print(dG) # -0.2218474860175924
 ```
-所以甲酸根的能量比HCOOH更负约0.222 eV，即，
-<center><img src="https://latex.codecogs.com/svg.image?E_{\mathrm{HCOO}^{-}}&space;=&space;E_{\mathrm{HCOOH}}&space;-&space;0.222\&space;\mathrm{eV}" title="E_{\mathrm{HCOO}^{-}} = E_{\mathrm{HCOOH}} - 0.222\ \mathrm{eV}" /></center>
 
+所以<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />的能量比HCOOH更负约0.222 eV，即，
+<center><img src="https://latex.codecogs.com/svg.image?G_{\mathrm{HCOO}^{-}}&space;=&space;G_{\mathrm{HCOOH}}&space;-&space;0.222\&space;\mathrm{eV}" title="G_{\mathrm{HCOO}^{-}} = G_{\mathrm{HCOOH}} - 0.222\ \mathrm{eV}" /></center>
 
 [[Back]](../)
