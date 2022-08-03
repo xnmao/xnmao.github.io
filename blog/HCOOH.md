@@ -7,8 +7,6 @@ layout: default
 酸性条件下，电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}\mathrm{RR}" title="\inline \mathrm{CO}_{2}\mathrm{RR}" />可生成HCOOH，但中性/碱性条件下，HCOOH会解离。
 本文旨在分析HCOOH的解离如何影响电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}\mathrm{RR}" title="\inline \mathrm{CO}_{2}\mathrm{RR}" />的反应自由能变化。
 
-感谢Michael博士！
-
 酸性条件下电催化<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}" title="\inline \mathrm{CO}_{2}" />还原为HCOOH，氢源是质子，甲酸盐的主要存在形式是HCOOH
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{CO}_{2}&space;&plus;&space;2\mathrm{H}^{&plus;}&space;&plus;&space;2e^{-}&space;\rightleftharpoons&space;\mathrm{HCOOH}" title="\mathrm{CO}_{2} + 2\mathrm{H}^{+} + 2e^{-} \rightleftharpoons \mathrm{HCOOH}" /></center>
 
@@ -43,5 +41,6 @@ print(dG) # -0.2218474860175924
 In the end, I don't think the neutral/alkaline equilibrium potential changes much from the acidic equilibrium potential.
 In a free energy diagram, going from <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}&space;&plus;&space;\mathrm{H}_{2}\mathrm{O}" title="\inline \mathrm{CO}_{2} + \mathrm{H}_{2}\mathrm{O}" /> to <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}&space;&plus;&space;\mathrm{OH}^{-}" title="\inline \mathrm{HCOO}^{-} + \mathrm{OH}^{-}" /> would be roughly the same according to the above estimations.
 
+感谢Michael博士！
 
 [[Back]](../)
