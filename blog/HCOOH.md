@@ -38,6 +38,8 @@ print(dG) # -0.2218474860175924
 所以<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />的能量比HCOOH更负约0.222 eV，即
 <center><img src="https://latex.codecogs.com/svg.image?G_{\mathrm{HCOO}^{-}}&space;=&space;G_{\mathrm{HCOOH}}&space;-&space;0.222\&space;\mathrm{eV}" title="G_{\mathrm{HCOO}^{-}} = G_{\mathrm{HCOOH}} - 0.222\ \mathrm{eV}" /></center>
 
+最终，对于这个总反应的pH效应，Michael博士的原话是
+
 In the end, I don't think the neutral/alkaline equilibrium potential changes much from the acidic equilibrium potential.
 In a free energy diagram, going from <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{CO}_{2}&space;&plus;&space;\mathrm{H}_{2}\mathrm{O}" title="\inline \mathrm{CO}_{2} + \mathrm{H}_{2}\mathrm{O}" /> to <img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}&space;&plus;&space;\mathrm{OH}^{-}" title="\inline \mathrm{HCOO}^{-} + \mathrm{OH}^{-}" /> would be roughly the same according to the above estimations.
 
