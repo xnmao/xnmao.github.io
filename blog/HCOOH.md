@@ -20,11 +20,9 @@ layout: default
 HCOOH可直接解离生成<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />
 <center><img src="https://latex.codecogs.com/svg.image?\mathrm{HCOOH}&space;\rightleftharpoons&space;\mathrm{HCOO}^{-}&space;&plus;&space;\mathrm{H}^{&plus;}" title="\mathrm{HCOOH} \rightleftharpoons \mathrm{HCOO}^{-} + \mathrm{H}^{+}" /></center>
 
-上式的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{\mathrm{a}}" title="\inline \mathrm{p}K_{\mathrm{a}}" />等于3.75。
-
-然后根据反应平衡常数和反应自由能的关系式
+上式的<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{p}K_{\mathrm{a}}" title="\inline \mathrm{p}K_{\mathrm{a}}" />等于3.75。然后可根据反应平衡常数和反应自由能的关系式，即
 <center><img src="https://latex.codecogs.com/svg.image?K&space;=&space;\exp\left(-\frac{\Delta&space;G}{k_{\mathrm{B}}T}\right)" title="K = \exp\left(-\frac{\Delta G}{k_{\mathrm{B}}T}\right)" /></center>
-可得，反应自由能为-0.222 eV。
+得该解离过程的反应自由能为-0.222 eV。
 
 ```python
 import numpy as np
@@ -37,7 +35,7 @@ dG = -kB*T*pKa*np.log(10)
 print(dG) # -0.2218474860175924
 ```
 
-所以<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />的能量比HCOOH更负约0.222 eV，即，
+所以<img src="https://latex.codecogs.com/svg.image?\inline&space;\mathrm{HCOO}^{-}" title="\inline \mathrm{HCOO}^{-}" />的能量比HCOOH更负约0.222 eV，即
 <center><img src="https://latex.codecogs.com/svg.image?G_{\mathrm{HCOO}^{-}}&space;=&space;G_{\mathrm{HCOOH}}&space;-&space;0.222\&space;\mathrm{eV}" title="G_{\mathrm{HCOO}^{-}} = G_{\mathrm{HCOOH}} - 0.222\ \mathrm{eV}" /></center>
 
 [[Back]](../)

@@ -5,6 +5,7 @@ layout: default
 # Home
 
 ## Blog
+* [pH对CO2RR热力学的影响](./blog/HCOOH.html)
 * [酸碱组分的平衡浓度与分布分数](./blog/distribution_fraction.html)
 * [氧气的自由能校正方法](./blog/O2.md)
 * [带电离子的自由能校正方法](./blog/charged.md)
