@@ -30,20 +30,20 @@ print(b) # 29.579664802345658
 
 #### 速查手册
 
-n_electron是基元RDS之前的步骤电子转移总数，chemical代表非电化学基元反应（不转移电子），<u>electrochemical</u>代表电化学基元反应（转移1个电子）。
+n_electron是基元RDS之前的步骤电子转移总数，chem代表非电化学基元反应（不转移电子），<u>e-chem</u>代表电化学基元反应（转移1个电子）。
 
-| n_electron | reaction | b/mV |        reaction        |    b/mV    |
-|:----------:|:--------:|:----:|:----------------------:|:----------:|
-|      0     | chemical |  NaN | <u>electrochemical</u> |  <u>118<u> |
-|      1     | chemical |  59  | <u>electrochemical</u> |  <u>39<u>  |
-|      2     | chemical |  30  | <u>electrochemical</u> |  <u>24<u>  |
-|      3     | chemical |  20  | <u>electrochemical</u> |  <u>17<u>  |
-|      4     | chemical |  15  | <u>electrochemical</u> |  <u>13<u>  |
-|      5     | chemical |  12  | <u>electrochemical</u> |  <u>11<u>  |
-|      6     | chemical |  10  | <u>electrochemical</u> |   <u>9<u>  |
-|      7     | chemical |   8  | <u>electrochemical</u> |   <u>8<u>  |
-|      8     | chemical |   7  | <u>electrochemical</u> |   <u>7<u>  |
-|      9     | chemical |   7  | <u>electrochemical</u> |   <u>6<u>  |
+| n_electron | reaction | b/mV |   reaction    |    b/mV    |
+|:----------:|:--------:|:----:|:-------------:|:----------:|
+|      0     |   chem   |  NaN | <u>e-chem</u> |  <u>118<u> |
+|      1     |   chem   |  59  | <u>e-chem</u> |  <u>39<u>  |
+|      2     |   chem   |  30  | <u>e-chem</u> |  <u>24<u>  |
+|      3     |   chem   |  20  | <u>e-chem</u> |  <u>17<u>  |
+|      4     |   chem   |  15  | <u>e-chem</u> |  <u>13<u>  |
+|      5     |   chem   |  12  | <u>e-chem</u> |  <u>11<u>  |
+|      6     |   chem   |  10  | <u>e-chem</u> |   <u>9<u>  |
+|      7     |   chem   |   8  | <u>e-chem</u> |   <u>8<u>  |
+|      8     |   chem   |   7  | <u>e-chem</u> |   <u>7<u>  |
+|      9     |   chem   |   7  | <u>e-chem</u> |   <u>6<u>  |
 
 ### 注意事项
 
