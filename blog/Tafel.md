@@ -8,6 +8,8 @@ layout: default
 总反应的塔菲尔斜率即等于
 <center><img src="https://latex.codecogs.com/svg.image?b&space;=&space;\frac{2.303RT}{\left(\alpha^{\ast}&plus;n\right)F" title="b = \frac{2.303RT}{\left(\alpha^{\ast}+n\right)F" /></center>
 
+如果RDS转移了1个电子，则<img src="https://latex.codecogs.com/svg.image?\inline&space;\alpha^{\ast}" title="\inline \alpha^{\ast}" />等于0.5；如果RDS转移了0个电子，则<img src="https://latex.codecogs.com/svg.image?\inline&space;\alpha^{\ast}" title="\inline \alpha^{\ast}" />等于0。
+
 ```python
 import numpy as np
 from ase.units import kB
