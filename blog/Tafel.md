@@ -45,4 +45,12 @@ n_electron是基元RDS之前的步骤电子转移总数，chemical代表非电�
 |      8     | chemical |   7  | <u>electrochemical</u> |   <u>7<u>  |
 |      9     | chemical |   7  | <u>electrochemical</u> |   <u>6<u>  |
 
+### 注意事项
+
+电极表面的化学反应中，中间体的物种变化是一个闭合的循环。反应的第1步不一定是洁净的表面，也有可能被中间体占据。这就有必要对基元反应重新编号，才能正确地计算基元RDS之前的步骤电子转移总数。详见[Exner 2020](<https://pubs.acs.org/doi/10.1021/acscatal.0c03865>)。
+
+### 参考资料
+
+[【电化学】浅谈塔菲尔动力学(Tafel Kinetics)](<https://blog.sciencenet.cn/blog-3436572-1239198.html>)
+
 [[Back]](../)
