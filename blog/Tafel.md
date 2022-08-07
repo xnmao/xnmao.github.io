@@ -10,6 +10,8 @@ layout: default
 
 如果RDS转移了1个电子，则<img src="https://latex.codecogs.com/svg.image?\inline&space;\alpha^{\ast}" title="\inline \alpha^{\ast}" />等于0.5；如果RDS转移了0个电子，则<img src="https://latex.codecogs.com/svg.image?\inline&space;\alpha^{\ast}" title="\inline \alpha^{\ast}" />等于0。
 
+例如，某电极表面反应的RDS不转移电子（非电化学过程），在RDS之前，已经转移了2个电子。
+则可代入方程计算得Tafel斜率的理论值为29.6 mV。
 ```python
 import numpy as np
 from ase.units import kB
@@ -22,6 +24,10 @@ def get_Tafel_slope(electron_transfer_in_RDS, n_transferred, T=298.15):
 b = get_Tafel_slope(electron_transfer_in_RDS=False, n_transferred=2)
 print(b) # 29.579664802345658
 ```
+
+反过来，如果实验测得Tafel斜率为112 mV，则可以推测RDS转移了1个电子，并且RDS之前没有电子转移过程。
+
+### 速查手册
 
 | n_electron | reaction | b/mV |     **reaction**    | **b/mV** |
 |:----------:|:--------:|:----:|:-------------------:|:--------:|
