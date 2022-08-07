@@ -26,20 +26,21 @@ print(b) # 29.579664802345658
 ```
 
 反过来，如果实验测得Tafel斜率为112 mV，则可以推测RDS转移了1个电子，并且RDS之前没有电子转移过程。
+如果实验测得Tafel斜率为74 mV，则可能是多个机理的混合。
 
 ### 速查手册
 
-| n_electron | reaction | b/mV |     **reaction**    | **b/mV** |
-|:----------:|:--------:|:----:|:-------------------:|:--------:|
-|      0     | chemical |  NaN | **electrochemical** |  **118** |
-|      1     | chemical |  59  | **electrochemical** |  **39**  |
-|      2     | chemical |  30  | **electrochemical** |  **24**  |
-|      3     | chemical |  20  | **electrochemical** |  **17**  |
-|      4     | chemical |  15  | **electrochemical** |  **13**  |
-|      5     | chemical |  12  | **electrochemical** |  **11**  |
-|      6     | chemical |  10  | **electrochemical** |   **9**  |
-|      7     | chemical |   8  | **electrochemical** |   **8**  |
-|      8     | chemical |   7  | **electrochemical** |   **7**  |
-|      9     | chemical |   7  | **electrochemical** |   **6**  |
+| n_electron | reaction | b/mV |        reaction        |    b/mV    |
+|:----------:|:--------:|:----:|:----------------------:|:----------:|
+|      0     | chemical |  NaN | <u>electrochemical</u> |  <u>118<u> |
+|      1     | chemical |  59  | <u>electrochemical</u> |  <u>39<u>  |
+|      2     | chemical |  30  | <u>electrochemical</u> |  <u>24<u>  |
+|      3     | chemical |  20  | <u>electrochemical</u> |  <u>17<u>  |
+|      4     | chemical |  15  | <u>electrochemical</u> |  <u>13<u>  |
+|      5     | chemical |  12  | <u>electrochemical</u> |  <u>11<u>  |
+|      6     | chemical |  10  | <u>electrochemical</u> |   <u>9<u>  |
+|      7     | chemical |   8  | <u>electrochemical</u> |   <u>8<u>  |
+|      8     | chemical |   7  | <u>electrochemical</u> |   <u>7<u>  |
+|      9     | chemical |   7  | <u>electrochemical</u> |   <u>6<u>  |
 
 [[Back]](../)
