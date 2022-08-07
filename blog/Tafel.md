@@ -6,9 +6,20 @@ layout: default
 
 塔菲尔斜率对应于表观电子转移数。表观电子转移数包含基元速控步骤RDS（rate-determining step）的电子转移数<img src="https://latex.codecogs.com/svg.image?\inline&space;\alpha^{\ast}" title="\inline \alpha^{\ast}" />和RDS之前的步骤电子转移数<img src="https://latex.codecogs.com/svg.image?\inline&space;n" title="\inline n" />。
 总反应的塔菲尔斜率即等于
-<img src="https://latex.codecogs.com/svg.image?b&space;=&space;\frac{2.303RT}{\left(\alpha^{\ast}&plus;n\right)F" title="b = \frac{2.303RT}{\left(\alpha^{\ast}+n\right)F" />
+<center><img src="https://latex.codecogs.com/svg.image?b&space;=&space;\frac{2.303RT}{\left(\alpha^{\ast}&plus;n\right)F" title="b = \frac{2.303RT}{\left(\alpha^{\ast}+n\right)F" /></center>
 
+```python
+import numpy as np
+from ase.units import kB
 
+def get_Tafel_slope(electron_transfer_in_RDS, n_transferred, T=298.15):
+    alpha_ast = 0.5 if electron_transfer_in_RDS else 0
+    b = np.log(10)*kB*T/(alpha_ast+n_transferred)
+    return b*1e+03 # V -> mV
+
+b = get_Tafel_slope(electron_transfer_in_RDS=False, n_transferred=2)
+print(b) # 29.579664802345658
+```
 
 | n_electron | reaction | b/mV |     **reaction**    | **b/mV** |
 |:----------:|:--------:|:----:|:-------------------:|:--------:|
