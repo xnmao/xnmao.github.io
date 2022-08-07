@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## 塔菲尔斜率推断反应机理
+## 使用塔菲尔斜率推断反应机理
 
 ### 计算公式
 
@@ -26,11 +26,11 @@ b = get_Tafel_slope(electron_transfer_in_RDS=False, n_transferred=2)
 print(b) # 29.579664802345658
 ```
 
-反过来，如果实验测得Tafel斜率为112 mV，则可以推测基元RDS转移了1个电子，并且基元RDS之前没有转移电子。如果实验测得Tafel斜率是74 mV，这有可能是多个机理混合。
+反过来可以使用手册速查，如果实验测得Tafel斜率为112 mV，则可以推测基元RDS转移了1个电子，并且基元RDS之前没有转移电子。如果实验测得Tafel斜率是74 mV，这有可能是多个机理混合。
 
-### 速查手册
+#### 速查手册
 
-n_electron是基元RDS之前的步骤电子转移总数，chemical代表非电化学基元反应（不转移电子），electrochemical代表电化学基元反应（转移1个电子）。
+n_electron是基元RDS之前的步骤电子转移总数，chemical代表非电化学基元反应（不转移电子），<u>electrochemical</u>代表电化学基元反应（转移1个电子）。
 
 | n_electron | reaction | b/mV |        reaction        |    b/mV    |
 |:----------:|:--------:|:----:|:----------------------:|:----------:|

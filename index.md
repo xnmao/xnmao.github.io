@@ -5,6 +5,7 @@ layout: default
 # Home
 
 ## Blog
+* [使用塔菲尔斜率推断反应机理](./blog/Tafel.html)
 * [pH对CO2RR热力学的影响](./blog/HCOOH.html)
 * [酸碱组分的平衡浓度与分布分数](./blog/distribution_fraction.html)
 * [氧气的自由能校正方法](./blog/O2.md)
