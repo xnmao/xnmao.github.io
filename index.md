@@ -5,6 +5,7 @@ layout: default
 # Home
 
 ## Blog
+* [使用ASE构建邻接矩阵](./blog/connectivity_matrix.html)
 * [使用Tafel斜率推断反应机理](./blog/Tafel.html)
 * [pH对CO2RR热力学的影响](./blog/HCOOH.html)
 * [酸碱组分的平衡浓度与分布分数](./blog/distribution_fraction.html)
