@@ -5,7 +5,7 @@ layout: default
 ## Publications
 
 ### (Co-)First Author
-1. <u>Xinnan Mao</u>, Lu Wang\*, Youyong Li\*, "Computational high-throughput screening of IrO2-based metal oxides as superior electrocatalysts for oxygen evolution", in ACS Spring 2022, 2022, DOI: [10.1021/scimeetings.2c00072](<https://doi.org/10.1021/scimeetings.2c00072>).
+1. <u>Xinnan Mao</u>, Lu Wang\*, Youyong Li\*, "Computational high-throughput screening of IrO2-based metal oxides as superior electrocatalysts for oxygen evolution", SciMeetings, ACS Spring 2022 Virtual Meeting, USA, March 17, 2022, DOI: [10.1021/scimeetings.2c00072](<https://doi.org/10.1021/scimeetings.2c00072>).
 1. <u>Xinnan Mao</u>, Lu Wang\*, Yafeng Xu, Pengju Wang, Youyong Li\*, Jijun Zhao\*, "Computational high-throughput screening of alloy nanoclusters for electrocatalytic hydrogen evolution", npj Comput. Mater., 2021, 7, 1, 46, DOI: [10.1038/s41524-021-00514-8](<https://doi.org/10.1038/s41524-021-00514-8>). `60`
 1. <u>Xinnan Mao</u>, Lu Wang\*, Yafeng Xu, Youyong Li\*, "Modulating the MoS2 Edge Structures by Doping Transition Metals for Electrocatalytic CO2 Reduction", J. Phys. Chem. C., 2020, 124, 19, 10523-10529, DOI: [10.1021/acs.jpcc.0c01070](<https://doi.org/10.1021/acs.jpcc.0c01070>). `10`
 1. Jie Zhang&dagger;, <u>Xinnan Mao</u>&dagger;, Binbin Pan&dagger;, Jie Xu, Xue Ding, Na Han, Lu Wang\*, Yuhang Wang\*, Yanguang Li\*, "Surface Promotion of Copper Nanoparticles with Alumina Clusters Derived from Layered Double Hydroxide Accelerates CO2 Reduction to Ethylene in Membrane Electrode Assemblies", Nano Res., 2022, DOI: [10.1007/s12274-022-5128-2](<https://doi.org/10.1007/s12274-022-5128-2>). `18`
