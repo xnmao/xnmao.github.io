@@ -10,9 +10,13 @@ layout: default
 3. A Natural Bond Orbital algorithm to handle systems characterized by periodic symmetry. [Periodic NBO software](<https://schmidt.chem.wisc.edu/nbosoftware>)
 4. Catalysis Microkinetic Analysis Package. [CatMAP](<https://catmap.readthedocs.io/en/latest/index.html>)
 5. Bader Charge Analysis. [Bader](<http://theory.cm.utexas.edu/henkelman/research/bader/>)
+6. A theoretical bond-detecting tool for solids. [COHP](<http://www.cohp.de/>)
 
 ### 安装示例
 1. [Intel® oneAPI Math Kernel Library & Intel® oneAPI HPC Toolkit](./installation/oneapi.md)
 2. [The Vienna Ab initio Simulation Package](./installation/vasp.md)
+
+### 科研网址
+1. The Nature Index journals. [Nature Index](<https://www.nature.com/nature-index/faq#journals>)
 
 [[Back]](../)
