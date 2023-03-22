@@ -24,10 +24,10 @@ layout: default
 1. Yunzhou Wen&dagger;, Peining Chen&dagger;, Lu Wang&dagger;, Shangyu Li&dagger;, Ziyun Wang, Jehad Abed, <u>Xinnan Mao</u>, Yimeng Min, Cao Thang Dinh, Phil De Luna, Rui Huang, Longsheng Zhang, Lie Wang, Liping Wang, Robert J. Nielsen, Huihui Li, Taotao Zhuang, Changchun Ke, Oleksandr Voznyy, Yongfeng Hu, Youyong Li, William A. Goddard III, Bo Zhang\*, Huisheng Peng\*, Edward H. Sargent\*, "Stabilizing Highly Active Ru Sites by Suppressing Lattice Oxygen Participation in Acidic Water Oxidation", J. Am. Chem. Soc., 2021, 143, 17, 6482-6490, DOI: [10.1021/jacs.1c00384](<https://doi.org/10.1021/jacs.1c00384>).
 1. Zhangyan Mu&dagger;, Na Han&dagger;, Dan Xu, Bailin Tian, Fangyuan Wang, Yiqi Wang, Yamei Sun, Cheng Liu, Panke Zhang, Xuejun Wu, Yanguang Li\*, Mengning Ding\*, "Critical role of hydrogen sorption kinetics in electrocatalytic CO2 reduction revealed by on-chip in situ transport investigations", Nat. Commun., 2022, 13, 1, 6911, DOI: [10.1038/s41467-022-34685-9](<https://doi.org/10.1038/s41467-022-34685-9>).
 
-## Activities
+### Activities
 1. <u>Xinnan Mao</u>, Lu Wang\*, Youyong Li\*, "Computational high-throughput screening of IrO2-based metal oxides as superior electrocatalysts for oxygen evolution", SciMeetings, ACS Spring 2022 Virtual Meeting, USA, March 17, 2022, DOI: [10.1021/scimeetings.2c00072](<https://doi.org/10.1021/scimeetings.2c00072>).
 
-## Projects
-1. <u>Xinnan Mao</u>, Lu Wang, Youyong Li, "Artificial Intelligence Assisted Design and Screening of Single-atomic Catalysts", financed by Academic Degree and Postgraduate Education Reform Project of Jiangsu Province, 01/05/2023 -> 30/04/2024
+### Projects
+1. <u>Xinnan Mao</u>, Lu Wang, Youyong Li, "Artificial Intelligence Assisted Design and Screening of Single-atomic Catalysts", financed by Postgraduate Research & Practice Innovation Program of Jiangsu Province, 01/05/2023 -> 30/04/2024
 
 [[Back]](./)
