@@ -28,6 +28,6 @@ layout: default
 1. <u>Xinnan Mao</u>, Lu Wang\*, Youyong Li\*, "Computational high-throughput screening of IrO2-based metal oxides as superior electrocatalysts for oxygen evolution", SciMeetings, ACS Spring 2022 Virtual Meeting, USA, March 17, 2022, DOI: [10.1021/scimeetings.2c00072](<https://doi.org/10.1021/scimeetings.2c00072>).
 
 ### Projects
-1. <u>Xinnan Mao</u>, Lu Wang, Youyong Li, "Artificial Intelligence Assisted Design and Screening of Single-atomic Catalysts", financed by Postgraduate Research & Practice Innovation Program of Jiangsu Province, 01/05/2023 -> 30/04/2024
+1. <u>Xinnan Mao</u>, Lu Wang, Youyong Li, "Artificial Intelligence Assisted Design and Screening of Single-atomic Catalysts", financed by Postgraduate Research & Practice Innovation Program of Jiangsu Province (KYCX23_3234), 01/05/2023 -> 30/04/2024
 
 [[Back]](./)
