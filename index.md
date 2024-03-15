@@ -21,6 +21,7 @@ layout: default
 
 ## Publications
 
+1. <u>Xinnan Mao</u>, Lu Wang\*, Youyong Li\*, "Understanding pH-dependent Oxygen Reduction Reaction on Metal Alloy Catalysts", ACS Catal., 2024, DOI: [10.1021/acscatal.4c00461](<https://doi.org/10.1021/acscatal.4c00461>).
 1. <u>Xinnan Mao</u>, Lu Wang\*, Youyong Li\*, "Machine-Learning-Assisted Discovery of High-Efficient Oxygen Evolution Electrocatalysts", J. Phys. Chem. Lett., 2023, 14, 1, 170-177, DOI: [10.1021/acs.jpclett.2c02873](<https://doi.org/10.1021/acs.jpclett.2c02873>).
 1. <u>Xinnan Mao</u>, Lu Wang\*, Yafeng Xu, Pengju Wang, Youyong Li\*, Jijun Zhao\*, "Computational High-throughput Screening of Alloy Nanoclusters for Electrocatalytic Hydrogen Evolution", npj Comput. Mater., 2021, 7, 1, 46, DOI: [10.1038/s41524-021-00514-8](<https://doi.org/10.1038/s41524-021-00514-8>).
 1. <u>Xinnan Mao</u>, Lu Wang\*, Yafeng Xu, Youyong Li\*, "Modulating the MoS2 Edge Structures by Doping Transition Metals for Electrocatalytic CO2 Reduction", J. Phys. Chem. C., 2020, 124, 19, 10523-10529, DOI: [10.1021/acs.jpcc.0c01070](<https://doi.org/10.1021/acs.jpcc.0c01070>).
