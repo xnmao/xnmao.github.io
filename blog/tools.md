@@ -13,8 +13,11 @@ layout: default
 6. A theoretical bond-detecting tool for solids. [COHP](<http://www.cohp.de/>)
 
 ### 安装示例
-1. [Intel® oneAPI Math Kernel Library & Intel® oneAPI HPC Toolkit](./installation/oneapi.md)
-2. [The Vienna Ab initio Simulation Package](./installation/vasp.md)
+1. [Intel® oneAPI Math Kernel Library & Intel® oneAPI HPC Toolkit](<./installation/oneapi.md>)
+2. [The Vienna Ab initio Simulation Package](<./installation/vasp.md>)
+
+### 超算配置手册
+1. [超算配置手册](<./installation/hpc.md>)
 
 ### 科研网址
 1. The Nature Index journals. [Nature Index](<https://www.nature.com/nature-index/faq#journals>)

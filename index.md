@@ -16,7 +16,6 @@ layout: default
 * [电化学笔记](./blog/electrochemistry.md)
 * [构建BC3纳米管](./blog/tube.md)
 * [计算工具与安装示例](./blog/tools.md)
-* [Nature电子版](./blog/nature.html)
 * [使用Python求解点到直线的距离](./blog/distance.html)
 
 ## Publications

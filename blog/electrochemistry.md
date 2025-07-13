@@ -16,4 +16,14 @@ layout: default
 
 https://doi.org/10.1016/j.electacta.2007.02.082
 
+### 
+
+Previous studies suggested that the effects of one water layer on adsorbates is basically equivalent with more layers.
+原句出自
+<https://doi.org/10.1021/acs.jpclett.1c03851>
+的SI第2页Computational Details的第2段
+<https://doi.org/10.1016/j.mtadv.2020.100091>
+<https://pubs.acs.org/doi/full/10.1021/acs.jpcc.7b02383>
+
+
 [[Back]](../)
